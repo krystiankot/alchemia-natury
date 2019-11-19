@@ -1,0 +1,87 @@
+.nav {
+    background-color: $mainColor;
+
+    &__description-container {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    }
+
+    &__logo-container {
+
+        width: 26px;
+        height: 39px;
+        background-color: white;
+    }
+
+    &__titles-container {
+
+        color: #ffffff;
+        text-align: center;
+
+        .nav__title {
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .nav__subtitle {
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+
+    @import "hamburger";
+
+
+
+    &__items {
+
+        display: flex;
+        flex-direction: column;
+        background-color: #d02a56;
+        list-style-type: none;
+        height: 0;
+        overflow: hidden;
+        transition: 0.5s;
+
+        &--is-active {
+            height: 151px;
+            transition: 0.5s;
+        }
+
+        .nav__item {
+            font-size: 14px;
+            line-height: 40px;
+            text-align: right;
+            margin: 0 30px;
+            transition: .5s;
+            color: #ffffff;
+            position: relative;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .nav__link {
+            position: relative;
+            color: #fff;
+            text-decoration: none;
+
+            &::before {
+                content: "";
+                width: 10px;
+                display: block;
+                height: 10px;
+                background-color: #fff;
+                border-radius: 5px;
+                bottom: 50%;
+                transform: translateY(50%);
+                position: absolute;
+                left: -20px;
+            }
+        }
+    }
+}

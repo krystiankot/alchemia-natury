@@ -1,0 +1,21 @@
+$mainColor: #D92C5A;
+
+//centering
+%centering {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//keyframes
+@mixin keyframes($animationName) {
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+%svgHover {
+    fill: #78cc6d;
+    transition: fill 0.3s ease;
+}
