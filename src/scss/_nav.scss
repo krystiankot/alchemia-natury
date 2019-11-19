@@ -13,7 +13,9 @@
 
         width: 26px;
         height: 39px;
-        background-color: white;
+        background: url('../assets/logo.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 
     &__titles-container {
@@ -72,10 +74,13 @@
 
             &::before {
                 content: "";
-                width: 10px;
+                width: 15px;
                 display: block;
-                height: 10px;
-                background-color: #fff;
+                height: 15px;
+                //background-color: #fff;
+                background: url('../assets/list-style.svg');
+                background-size: contain;
+                background-repeat: no-repeat;
                 border-radius: 5px;
                 bottom: 50%;
                 transform: translateY(50%);
