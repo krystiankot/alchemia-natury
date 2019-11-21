@@ -1,0 +1,87 @@
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+
+    &__container {}
+
+    &__slide {
+        background-color: #d3d3d3;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: 0.5s ease-in;
+
+        &--moved-left {
+            transform: translateX(-100%);
+            transition: 0.5s ease-in;
+            z-index: 0;
+            opacity: 0;
+        }
+
+        &--moved-right {
+            transform: translateX(100%);
+            transition: 0.5s ease-in;
+            z-index: 0;
+            opacity: 0;
+        }
+
+        &--moved-center {
+            transform: translateX(0);
+            transition: 0.5s ease-in;
+            background-color: #8b8b8b;
+            color: #fff;
+
+        }
+    }
+
+    &__nav {
+
+        .slider__button {
+            position: absolute;
+            top: 0;
+            width: 6rem;
+            height: 100%;
+            opacity: 0.01;
+            border: none;
+            background-color: #fff;
+            transition: .5s;
+
+            &:hover {
+                opacity: 0.1;
+                transition: .5s;
+            }
+
+            &--prev {}
+
+            &--next {
+                right: 0;
+            }
+        }
+    }
+
+    &__dots {
+        position: absolute;
+        bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        width: 100%;
+
+        .slider__dots-element {
+            margin: 0 0.8rem;
+        }
+
+        .slider__dots-button {
+            height: 15px;
+            width: 15px;
+            border-radius: 10px;
+            border: 2px solid $mainColor;
+            background: none;
+
+            &--is-active {
+                background: $mainColor;
+            }
+        }
+    }
+}

@@ -14,3 +14,5 @@ hamburger.addEventListener('click', function () {
     }
 
 })
+
+const slider = new Slider('.header__slider', {});
