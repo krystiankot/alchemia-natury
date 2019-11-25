@@ -16,3 +16,6 @@ hamburger.addEventListener('click', function () {
 })
 
 const slider = new Slider('.header__slider', {});
+const filter = new Filter('.products__container', {});
+
+filter.generateTags();
