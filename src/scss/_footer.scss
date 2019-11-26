@@ -1,0 +1,85 @@
+.footer {
+    background-color: #252525;
+
+    .section__title {
+        color: #fff;
+    }
+
+    &__data-container {
+        display: flex;
+        margin: 20px 0;
+        justify-content: space-between;
+    }
+
+    &__data {
+        list-style: none;
+        color: #fff;
+    }
+
+    &__data-item {
+        position: relative;
+        padding-left: 40px;
+        display: flex;
+        margin-bottom: 8px;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            align-self: center;
+        }
+    }
+
+    .icon-nip::before {
+        font-family: 'open sans';
+        content: 'NIP';
+        font-weight: 900;
+        display: inline;
+    }
+
+    &__media {
+        list-style: none;
+        display: flex;
+    }
+
+    &__media-title {
+        color: #fff;
+        text-align: center;
+    }
+
+    &__media-item {
+        display: block;
+        margin: 20px 0;
+
+        &::before {
+            font-size: 30px;
+        }
+
+        &:hover::before {
+            cursor: pointer;
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        color: $mainColor;
+        display: block;
+        font-size: 12px;
+    }
+
+    &__author {
+        margin-top: 12px;
+        color: #aaa;
+        font-size: 11px;
+        display: block;
+        text-align: center;
+
+        a {
+            color: #aaa;
+            text-decoration: none;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}

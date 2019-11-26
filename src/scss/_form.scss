@@ -1,0 +1,108 @@
+$backgroundColor: #252525;
+$activeColor: #fff;
+$defaultColor: #b8b8b8;
+
+.form {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &__input-container {
+        position: relative;
+        width: 100%;
+        margin: 10px 0;
+        transition: 0.5s;
+
+        &--width50 {
+            width: 49%;
+        }
+
+        &--with-alert {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__input-label {
+        position: absolute;
+        color: $defaultColor;
+        left: 0;
+        transform: translate(0, 50%);
+        pointer-events: none;
+        transition: .2s ease-out;
+        padding: 0 14px;
+    }
+
+    &__input {
+        padding: 12px 14px;
+        border-radius: 4px;
+        border: 1px solid $defaultColor;
+        color: $defaultColor;
+        font-size: 16px;
+        width: 100%;
+        background-color: $backgroundColor;
+        resize: none;
+
+        &:focus {
+            outline: none;
+            border: 2px solid $activeColor;
+            color: $activeColor;
+        }
+
+        &:focus~&-label {
+            font-size: 13px;
+            transform: translate(10px, -50%);
+            transition: .2s ease-in;
+            background: $backgroundColor;
+            padding: 0 4px;
+            color: $activeColor;
+        }
+
+        &--is-filled~.form__input-label {
+            font-size: 13px;
+            transform: translate(10px, -50%);
+            transition: .2s ease-in;
+            background: $backgroundColor;
+            padding: 0 4px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 6px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, .5);
+            border-radius: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            box-shadow: none;
+            background-color: transparent;
+        }
+    }
+
+    &__input-alert {
+        color: #d93025;
+        font-size: 13px;
+        position: absolute;
+        left: 0;
+        bottom: -22px;
+        display: none;
+
+        &::before {
+            font-size: 15px;
+        }
+    }
+
+    &__submit-btn {
+        border: none;
+        padding: 10px 20px;
+        background-color: $mainColor;
+        color: $activeColor;
+        border-radius: 4px;
+        font-weight: 600;
+        float: right;
+        position: relative;
+    }
+}
