@@ -7,19 +7,17 @@ $defaultColor: #b8b8b8;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
+    font-size: 1rem;
 
     &__input-container {
         position: relative;
         width: 100%;
-        margin: 10px 0;
+        margin: 0.625em 0;
         transition: 0.5s;
 
         &--width50 {
             width: 49%;
-        }
-
-        &--with-alert {
-            margin-bottom: 20px;
         }
     }
 
@@ -30,18 +28,22 @@ $defaultColor: #b8b8b8;
         transform: translate(0, 50%);
         pointer-events: none;
         transition: .2s ease-out;
-        padding: 0 14px;
+        padding: 0 0.875em;
+        top: 0;
+        font-size: 0.9rem;
     }
 
     &__input {
-        padding: 12px 14px;
+        padding: 0.7em 0.875em;
         border-radius: 4px;
         border: 1px solid $defaultColor;
         color: $defaultColor;
-        font-size: 16px;
+        font-size: 0.9rem;
         width: 100%;
         background-color: $backgroundColor;
         resize: none;
+        transition: .2s;
+        display: block;
 
         &:focus {
             outline: none;
@@ -50,7 +52,7 @@ $defaultColor: #b8b8b8;
         }
 
         &:focus~&-label {
-            font-size: 13px;
+            font-size: 0.8rem;
             transform: translate(10px, -50%);
             transition: .2s ease-in;
             background: $backgroundColor;
@@ -59,50 +61,101 @@ $defaultColor: #b8b8b8;
         }
 
         &--is-filled~.form__input-label {
-            font-size: 13px;
+            font-size: 0.8rem;
             transform: translate(10px, -50%);
             transition: .2s ease-in;
             background: $backgroundColor;
-            padding: 0 4px;
+            padding: 0 0.25em;
+        }
+
+        &--with-alert {
+            margin-bottom: 1.25em;
+            transition: .2s;
         }
 
         &::-webkit-scrollbar {
-            width: 6px;
+            width: 0.375em;
             background-color: transparent;
         }
 
         &::-webkit-scrollbar-thumb {
             background-color: rgba(255, 255, 255, .5);
-            border-radius: 6px;
+            border-radius: 0.375em;
         }
 
         &::-webkit-scrollbar-track {
             box-shadow: none;
             background-color: transparent;
         }
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus,
+        &:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px $backgroundColor inset !important;
+            -webkit-text-fill-color: $defaultColor !important;
+        }
     }
 
     &__input-alert {
         color: #d93025;
-        font-size: 13px;
+        font-size: 0.75rem;
         position: absolute;
         left: 0;
-        bottom: -22px;
+        bottom: -0.3125em;
         display: none;
+        animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+
+
+        &:hover {
+            // animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
+
+        }
 
         &::before {
-            font-size: 15px;
+            font-size: 0.9375‬em;
         }
     }
 
     &__submit-btn {
         border: none;
-        padding: 10px 20px;
+        padding: 0.5em 0.8em;
         background-color: $mainColor;
         color: $activeColor;
         border-radius: 4px;
         font-weight: 600;
-        float: right;
-        position: relative;
+        transition: .5s;
+        margin-top: 0.3125em;
+        font-size: 0.9rem;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(255, 57, 110);
+            transition: .5s;
+        }
+    }
+}
+
+@include keyframes(shake) {
+
+    10%,
+    90% {
+        transform: translateX(-1px);
+    }
+
+    20%,
+    80% {
+        transform: translateX(2px);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translateX(-4px);
+    }
+
+    40%,
+    60% {
+        transform: translateX(4px);
     }
 }

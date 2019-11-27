@@ -19,3 +19,5 @@ const slider = new Slider('.header__slider', {});
 const filter = new Filter('.products__container', {});
 
 filter.generateTags();
+
+const contactForm = new ContactForm('.section__form-container', {});

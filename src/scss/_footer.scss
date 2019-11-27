@@ -1,5 +1,6 @@
 .footer {
     background-color: #252525;
+    font-size: 0.9rem;
 
     .section__title {
         color: #fff;
@@ -39,6 +40,7 @@
     &__media {
         list-style: none;
         display: flex;
+        justify-content: flex-end;
     }
 
     &__media-title {
@@ -51,7 +53,7 @@
         margin: 20px 0;
 
         &::before {
-            font-size: 30px;
+            font-size: 1.6rem;
         }
 
         &:hover::before {
@@ -63,13 +65,13 @@
         text-align: center;
         color: $mainColor;
         display: block;
-        font-size: 12px;
+        font-size: 0.7rem;
     }
 
     &__author {
-        margin-top: 12px;
+        margin-top: 0.6rem;
         color: #aaa;
-        font-size: 11px;
+        font-size: 0.6rem;
         display: block;
         text-align: center;
 
