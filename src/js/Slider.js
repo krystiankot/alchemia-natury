@@ -36,12 +36,14 @@ class Slider {
         this.prev = document.createElement('button');
         this.prev.classList.add('slider__button');
         this.prev.classList.add('slider__button--prev');
+        this.prev.classList.add('icon-left-open');
         this.prev.type = 'button';
         this.prev.addEventListener('click', this.slidePrev, false);
 
         this.next = document.createElement('button');
         this.next.classList.add('slider__button');
         this.next.classList.add('slider__button--next');
+        this.next.classList.add('icon-right-open');
         this.next.type = 'button';
         this.next.addEventListener('click', this.slideNext, false);
 

@@ -19,6 +19,8 @@ html {
 @import "footer";
 @import "form";
 
+.content-container {}
+
 .section {
     padding: 20px;
 
@@ -62,5 +64,43 @@ html {
             box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
         }
+    }
+}
+
+.slider__text-container {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slider__title {
+    position: relative;
+    font-size: 2.875rem;
+    padding: 10px 0px;
+    text-align: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 2.8em;
+        height: 2px;
+        background-color: $mainColor;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+}
+
+.slider__paragraph {
+    margin: 15px 15%;
+    font-weight: 300;
+    text-align: center;
+    color: #fff;
+}
+
+@media (min-width: 65rem) {
+    .content-container {
+        margin: 0 20vw;
     }
 }

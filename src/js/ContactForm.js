@@ -1,3 +1,4 @@
+'use strict';
 class ContactForm {
     constructor(formContainerSelector, options) {
         this.formContainer = document.querySelector(formContainerSelector);

@@ -1,4 +1,12 @@
 .header {
-    height: calc(100vh - 79px);
+    height: calc(100vh - 78px);
+    margin-top: 78px;
     background: #d3d3d3;
+}
+
+@media (min-width: 65rem) {
+    .header {
+        height: 100vh;
+        margin-top: 0;
+    }
 }
