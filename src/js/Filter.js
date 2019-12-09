@@ -25,7 +25,6 @@ class Filter {
         this.filter(tagsContainer.children[0]);
     }
     filter = (item) => {
-        console.log(item.innerText);
         for (let i = 0; i < this.elements.length; i++) {
             this.elements[i].removeAttribute('filtered');
         }

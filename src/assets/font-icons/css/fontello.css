@@ -1,13 +1,13 @@
 @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.eot?18219913');
-    src: url('../font/fontello.eot?18219913#iefix') format('embedded-opentype'),
-        url('../font/fontello.woff2?18219913') format('woff2'),
-        url('../font/fontello.woff?18219913') format('woff'),
-        url('../font/fontello.ttf?18219913') format('truetype'),
-        url('../font/fontello.svg?18219913#fontello') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?66753938');
+  src: url('../font/fontello.eot?66753938#iefix') format('embedded-opentype'),
+    url('../font/fontello.woff2?66753938') format('woff2'),
+    url('../font/fontello.woff?66753938') format('woff'),
+    url('../font/fontello.ttf?66753938') format('truetype'),
+    url('../font/fontello.svg?66753938#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
@@ -16,104 +16,109 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?18219913#fontello') format('svg');
+    src: url('../font/fontello.svg?66753938#fontello') format('svg');
   }
 }
 */
 
 [class^="icon-"]:before,
 [class*=" icon-"]:before {
-    font-family: "fontello";
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
 
-    display: inline-block;
-    text-decoration: inherit;
-    width: 1em;
-    margin-right: .2em;
-    text-align: center;
-    /* opacity: .8; */
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
 
-    /* For safety - reset parent styles, that can break glyph codes*/
-    font-variant: normal;
-    text-transform: none;
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
 
-    /* fix buttons height, for twitter bootstrap */
-    line-height: 1em;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
 
-    /* Animation center compensation - margins should be symmetric */
-    /* remove if not needed */
-    margin-left: .2em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
 
-    /* you can be more comfortable with increased icons size */
-    /* font-size: 120%; */
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
 
-    /* Font smoothing. That was taken from TWBS */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-    /* Uncomment for 3D effect */
-    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
+.icon-search:before {
+  content: '\e805';
+}
+
+/* '' */
 .icon-right-open:before {
-    content: '\e800';
+  content: '\e800';
 }
 
 /* '' */
 .icon-left-open:before {
-    content: '\e801';
+  content: '\e801';
 }
 
 /* '' */
 .icon-attention-alt:before {
-    content: '\e802';
+  content: '\e802';
 }
 
 /* '' */
 .icon-location:before {
-    content: '\e803';
+  content: '\e803';
 }
 
 /* '' */
 .icon-phone:before {
-    content: '\e804';
+  content: '\e804';
 }
 
 /* '' */
 .icon-mail-alt:before {
-    content: '\f0e0';
+  content: '\f0e0';
 }
 
 /* '' */
 .icon-facebook-squared:before {
-    content: '\f30e';
-    color: #fff;
-    transition: .5s;
+  content: '\f30e';
+  color: #fff;
+  transition: .5s;
 }
 
 
 /* '' */
 
 .icon-facebook-squared:hover::before {
-    /* color: #f7f7f7; */
-    color: #3b5998;
-    transition: .5s;
+  /* color: #f7f7f7; */
+  color: #3b5998;
+  transition: .5s;
 }
 
 /* '' */
 .icon-instagram:before {
-    content: '\f32d';
-    color: #f7f7f7;
-    /* color: #E1306C; */
-    transition: .5s;
+  content: '\f32d';
+  color: #f7f7f7;
+  /* color: #E1306C; */
+  transition: .5s;
 }
 
 .icon-instagram:hover::before {
-    /* color: #f7f7f7; */
-    color: #E1306C;
-    transition: .5s;
+  /* color: #f7f7f7; */
+  color: #E1306C;
+  transition: .5s;
 }
 
 /* '' */
