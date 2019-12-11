@@ -108,7 +108,7 @@ function htmlToDistribution() {
 function jsToDistribution() {
     return gulp.src(config.srcJS)
         .pipe(concat(config.nameJS))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(rename({
             suffix: '.min'
         }))

@@ -1,3 +1,4 @@
+'use strict';
 window.onload = function () {
 
 const slider = new Slider('.header__slider', {});

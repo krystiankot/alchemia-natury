@@ -1,4 +1,3 @@
-'use strict';
 class Navigation {
     constructor(button, list) {
         this.button = button;

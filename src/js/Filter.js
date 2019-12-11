@@ -1,4 +1,3 @@
-'use strict';
 class Filter {
     constructor(filterSelector, options) {
         this.filteredElement = document.querySelector(filterSelector);
@@ -108,22 +107,20 @@ class Filter {
                 this.showDetails(this.elements[i]);
 
                 let product = this.elements[i].id;
-                document.querySelector('#'+product+'__close-btn').addEventListener('click', function(){
-                document.querySelector('#'+product+'-details').classList.remove('products-details__container--opacity');
-                document.querySelector('.products-details__background').classList.remove('products-details__background--opacity');
-            }, false);
 
-            document.querySelector('.products-details__background').addEventListener('click', function(){
-                document.querySelector('#'+product+'-details').classList.remove('products-details__container--opacity');
-                document.querySelector('.products-details__background').classList.remove('products-details__background--opacity');
-            }, false);
-    
-            document.addEventListener('keydown', function(e){
-                if(e.keyCode==27) {
+                const toggleClasses = () => {
                     document.querySelector('#'+product+'-details').classList.remove('products-details__container--opacity');
-                document.querySelector('.products-details__background').classList.remove('products-details__background--opacity');
+                    document.querySelector('.products-details__background').classList.remove('products-details__background--opacity');
+                    document.body.style.overflow = 'auto';
                 }
-            }, false);
+
+                document.querySelector('#'+product+'__close-btn').addEventListener('click', toggleClasses, false);
+                document.querySelector('.products-details__background').addEventListener('click', toggleClasses, false);
+                document.addEventListener('keydown', function(e){
+                    if(e.keyCode==27) {
+                        toggleClasses();
+                    }
+                }, false);
             }, false);
         }
     }
@@ -131,6 +128,7 @@ class Filter {
     showDetails = (element) => {
         let product = element.id;
         document.querySelector('#'+product+'-details').classList.add('products-details__container--opacity');
-            document.querySelector('.products-details__background').classList.add('products-details__background--opacity');  
+        document.querySelector('.products-details__background').classList.add('products-details__background--opacity');
+        document.body.style.overflow = 'hidden';  
     }
 }
