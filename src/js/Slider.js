@@ -11,6 +11,8 @@ class Slider {
         this.dots = [];
 
         this.generateSlider();
+
+        setInterval(this.slideNext, 4000);
     }
 
     generateSlider = () => {

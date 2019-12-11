@@ -3,9 +3,13 @@ class Filter {
     constructor(filterSelector, options) {
         this.filteredElement = document.querySelector(filterSelector);
         this.options = options;
+        this.tags = [];
         this.elements = this.filteredElement.children;
         this.filteredElements = [];
         window.addEventListener('resize', this.sortAll, false);
+
+        this.generateTags();
+        this.addEvents();
     }
 
     generateTags = () => {
@@ -18,12 +22,24 @@ class Filter {
             item.classList.add('filter__item');
             item.addEventListener('click', () => {
                 this.filter(item);
+                this.styleTags(item);
             }, false);
             tagsContainer.appendChild(item);
+            this.tags.push(item);
         }
+        this.tags[0].classList.add('filter__item--is-active');
         this.filteredElement.parentNode.insertBefore(tagsContainer, this.filteredElement);
         this.filter(tagsContainer.children[0]);
     }
+
+    styleTags = (item) => {
+        for (let i = 0; i < this.tags.length; i++) {
+            if(this.tags[i].getAttribute('data-category')===item.getAttribute('data-category')) {
+                this.tags[i].classList.add('filter__item--is-active');
+            } else this.tags[i].classList.remove('filter__item--is-active');
+        }
+    }
+
     filter = (item) => {
         for (let i = 0; i < this.elements.length; i++) {
             this.elements[i].removeAttribute('filtered');
@@ -41,14 +57,18 @@ class Filter {
         }
         this.sortAll();
     }
-    sortAll = () => {
-        if (window.innerWidth < 400) {
-            this.options.columns = 2;
-        } else if (window.innerWidth > 400 && window.innerWidth < 1000) {
-            this.options.columns = 3;
-        } else if (window.innerWidth > 1000) {
-            this.options.columns = 4;
+
+    setColumnsNumber = () => {
+        for(let i=0; i<this.options.columnsSettings.length; i++) {
+            if(this.filteredElement.offsetWidth > this.options.columnsSettings[i].containerMinWidth && this.filteredElement.offsetWidth <= this.options.columnsSettings[i].containerMaxWidth) {
+                this.options.columns = this.options.columnsSettings[i].columns;
+                break;
+            }
         }
+    }
+
+    sortAll = () => {
+        this.setColumnsNumber();
         let margin = 5;
         let columns = [];
         const findShortestColumn = (columns) => {
@@ -66,7 +86,6 @@ class Filter {
                 let column = findShortestColumn(columns);
                 let height = columns[column];
                 let left = column * (100 / this.options.columns + margin / this.options.columns);
-                // `calc(${height}px)`;
                 this.elements[i].style.top = height + 'px';
                 this.elements[i].style.left = left + '%';
                 this.elements[i].style.transform = 'scale(1)';
@@ -81,5 +100,37 @@ class Filter {
             }
         }
         this.filteredElement.style.height = columns[findLongestColumn(columns)] + 'px';
+    }
+
+    addEvents = () => {
+        for(let i=0; i<this.elements.length; i++) {
+            this.elements[i].addEventListener('click', () => {
+                this.showDetails(this.elements[i]);
+
+                let product = this.elements[i].id;
+                document.querySelector('#'+product+'__close-btn').addEventListener('click', function(){
+                document.querySelector('#'+product+'-details').classList.remove('products-details__container--opacity');
+                document.querySelector('.products-details__background').classList.remove('products-details__background--opacity');
+            }, false);
+
+            document.querySelector('.products-details__background').addEventListener('click', function(){
+                document.querySelector('#'+product+'-details').classList.remove('products-details__container--opacity');
+                document.querySelector('.products-details__background').classList.remove('products-details__background--opacity');
+            }, false);
+    
+            document.addEventListener('keydown', function(e){
+                if(e.keyCode==27) {
+                    document.querySelector('#'+product+'-details').classList.remove('products-details__container--opacity');
+                document.querySelector('.products-details__background').classList.remove('products-details__background--opacity');
+                }
+            }, false);
+            }, false);
+        }
+    }
+
+    showDetails = (element) => {
+        let product = element.id;
+        document.querySelector('#'+product+'-details').classList.add('products-details__container--opacity');
+            document.querySelector('.products-details__background').classList.add('products-details__background--opacity');  
     }
 }

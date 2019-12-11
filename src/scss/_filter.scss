@@ -19,6 +19,12 @@
             display: none;
         }
 
+        &--is-active {
+            color: $mainColor;
+            border-color: $mainColor;
+            font-weight: 600;
+        }
+
         &:hover {
             cursor: pointer;
             color: $mainColor;

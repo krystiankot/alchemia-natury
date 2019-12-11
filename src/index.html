@@ -28,11 +28,12 @@
             </button>
         </div>
         <ul class="nav__items">
-            <li class="nav__item"><a class="nav__link" href="#">Produkty</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Gdzie kupić</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">O mnie</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Współpraca</a></li>
-            <li class="nav__item"><a class="nav__link" href="#">Kontakt</a></li>
+            <li class="nav__item"><a class="nav__link" href="#kim-jestesmy">Kim jesteśmy</a></li>
+            <li class="nav__item"><a class="nav__link" href="#produkty">Produkty</a></li>
+            <!-- <li class="nav__item"><a class="nav__link" href="#">Gdzie kupić</a></li> -->
+            <li class="nav__item"><a class="nav__link" href="#o-mnie">O mnie</a></li>
+            <!-- <li class="nav__item"><a class="nav__link" href="#">Współpraca</a></li> -->
+            <li class="nav__item"><a class="nav__link" href="#kontakt">Kontakt</a></li>
         </ul>
     </nav>
     <header class="header">
@@ -50,7 +51,7 @@
         </div>
     </header>
     <main class="content-container">
-        <section class="section intro">
+        <section id="kim-jestesmy" class="section intro">
             <h3 class="section__title">Kim jesteśmy</h3>
             <p class="section__paragraph">Alchemia natury to mała manufaktura, naturalne ręcznie robione kosmetyki
                 inspirowane
@@ -66,10 +67,10 @@
             </p>
         </section>
 
-        <section class="section products">
+        <section id="produkty" class="section products">
             <h3 class="section__title">Produkty</h3>
             <div class="products__container">
-                <div data-category="Maseczki enzymatyczne" class="products__product">
+                <div id="product-1" data-category="Maseczki enzymatyczne" class="products__product">
                     <div class="products__img-container">
                         <img class="products__img" src="./assets/soap.png" alt="soap image">
                         <div class="products__img-background icon-search"></div>
@@ -77,7 +78,7 @@
                     <h4 class="products__name">Produkt</h4>
                     <span class="products__category">mydło1</span>
                 </div>
-                <div data-category="Nawilżające bomby kąpielowe" class="products__product">
+                <div id="product-2" data-category="Nawilżające bomby kąpielowe" class="products__product">
                     <div class="products__img-container">
                         <img class="products__img" src="./assets/soap2.jpg" alt="soap image">
                         <div class="products__img-background icon-search"></div>
@@ -85,7 +86,7 @@
                     <h4 class="products__name">Produkt</h4>
                     <span class="products__category">mydło2</span>
                 </div>
-                <div data-category="Mydła" class="products__product">
+                <div id="product-3" data-category="Mydła" class="products__product">
                     <div class="products__img-container">
                         <img class="products__img" src="./assets/soap4.png" alt="soap image">
                         <div class="products__img-background icon-search"></div>
@@ -93,7 +94,7 @@
                     <h4 class="products__name">Produkt</h4>
                     <span class="products__category">mydło3</span>
                 </div>
-                <div data-category="Aromapeutyczne sole do kąpieli" class="products__product">
+                <div id="product-4" data-category="Aromapeutyczne sole do kąpieli" class="products__product">
                     <div class="products__img-container">
                         <img class="products__img" src="./assets/soap3.png" alt="soap image">
                         <div class="products__img-background icon-search"></div>
@@ -101,7 +102,7 @@
                     <h4 class="products__name">Produkt</h4>
                     <span class="products__category">mydło4</span>
                 </div>
-                <div data-category="Nawilżające bomby kąpielowe" class="products__product">
+                <div id="product-5" data-category="Nawilżające bomby kąpielowe" class="products__product">
                     <div class="products__img-container">
                         <img class="products__img" src="./assets/soap4.png" alt="soap image">
                         <div class="products__img-background icon-search"></div>
@@ -109,7 +110,7 @@
                     <h4 class="products__name">Produkt</h4>
                     <span class="products__category">mydło5</span>
                 </div>
-                <div data-category="Mydła" class="products__product">
+                <div id="product-6" data-category="Mydła" class="products__product">
                     <div class="products__img-container">
                         <img class="products__img" src="./assets/soap3.png" alt="soap image">
                         <div class="products__img-background icon-search"></div>
@@ -117,7 +118,7 @@
                     <h4 class="products__name">Produkt</h4>
                     <span class="products__category">mydło6</span>
                 </div>
-                <div data-category="Maseczki enzymatyczne" class="products__product">
+                <div id="product-7" data-category="Maseczki enzymatyczne" class="products__product">
                     <div class="products__img-container">
                         <img class="products__img" src="./assets/soap2.jpg" alt="soap image">
                         <div class="products__img-background icon-search"></div>
@@ -125,7 +126,7 @@
                     <h4 class="products__name">Produkt</h4>
                     <span class="products__category">mydło7</span>
                 </div>
-                <div data-category="Nawilżające bomby kąpielowe" class="products__product">
+                <div id="product-8" data-category="Nawilżające bomby kąpielowe" class="products__product">
                     <div class="products__img-container">
                         <img class="products__img" src="./assets/soap.png" alt="soap image">
                         <div class="products__img-background icon-search"></div>
@@ -136,6 +137,80 @@
             </div>
         </section>
 
+        <div class="products-details__background"></div>
+    <div id='product-1-details' class="products-details__container">
+        <div class="products-details__close-btn-container">
+            <button id="product-1__close-btn" class="products-details__close-btn"><img src="assets/x-icon.svg" alt="exit-icon"></button>
+        </div>
+        <div class="products-details__photo">
+            <img src="assets/soap.jpg" alt="project-photo">
+        </div>
+        <div class="products-details__info">
+            <h4 class="products-details__title">Soczysta gruszka</h4>
+            <span class="products-details__tags">Nawilzająca bomba kąpielowa</span>
+            <h5 class="products-details__subtitle">Właściwości</h5>
+            <ul class="products-details__list">
+                <li class="products-details__list-item">nawilży skórę</li>
+                <li class="products-details__list-item">umili kąpiel efektem musowana</li>
+                <li class="products-details__list-item">oczyści dzięki zastosowanej glince</li>
+                <li class="products-details__list-item">zapach jest tylko delikatnym dodatkiem, głównym zadaniem kuli jest nawilżenie ciała</li>
+                <li class="products-details__list-item">zmiękcza wode dzięki czemu kąpiel staje się przyjemniejsza</li>
+            </ul>
+            
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sposób użycia:</span> Bombę wrzucić do wanny z ciepła wodą, po kąpieli ciało osuszać delikatnie ręcznikiem oklepując, a nie pocierając. 
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> soda oczyszczona, kwas cytrynowy, skrobia kukurydziana, masło Shea, olej kokosowy, glinak żółta, kompozycja zapachowa</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span> Sodium Bicarbonate, Citric Acid, Zea Mays Starch, Butyrospermum Parkii Butter, Cocos Nucifera Oil, Illite, Parfum, Hexyl Cinnama*l, Hydroxyisohexyl 3-Cyclohexene Carboxaldehyde*.
+            <p class="products-details__paragraph">Waga ok. 85g</p>
+            
+            <h5 class="products-details__subtitle">Więcej o składnikach</h5>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Soda oczyszczona</span> to podstawowy składnik bomb kąpielowych, a dodatkowo soda ma właściwości oczyszczające i odkażające.</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Kwas cytrynowy</span> to drugi podstawowy składnik bomb kąpielowych, w reakcji z soda i wodą daje efekt musowania.  Dodatkowo kwasek wykazuje właściwości odkażające i przeciwbakteryjne, a także zmiękcza wodę. 
+            </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skrobia kukurydziana</span> powoduje, że bomby nie opadają na dno wanny a unoszą się na wodzie. Skrobia zmiękcza skórę, a także może delikatnie łagodzić podrażnienia. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Masło Shea</span> (nierafinowane) wykazuje ogromne działanie pielęgnacyjne, to panaceum na suchą skórę. Natłuszcza, regeneruje, łagodzi podrażnienia, wygładza i uelastycznia. Masło Shea zwiera naturalną allantoinę, nasycone i nienasycone kwasy tłuszczowe oraz prowitaminę A i witaminy F i E, co sprawia, że skóra jest dobrze nawilżona i pokryta lipidowym filmem zabezpieczającym. Substancje zawarte w maśle chronią i wzmacniają skórę poprawiając jej elastyczność. Shea chroni przed wysuszeniem oraz wspomaga utrzymanie wody w komórkach skóry. To jedno z lepszych maseł na świeci. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Olej kokosowy</span> posiada właściwości nawilżające i ochronne. Dobrze się wchłania, wygładza i poprawia elastyczność skóry. Sprzyja zdrowemu i promiennemu wyglądowi skóry, pozostawią ją miękką i przyjemną w dotyku. Polecany jest do skóry suchej, pękającej oraz uszkodzonej przez słoń lub różnego rodzaju zapalenia. Jest dobrą alternatywą dla chemicznych ”oliwek dla dzieci”. Ponadto może być samodzielnie stosowany, jako balsam wtedy najlepsze efekty można uzyskać używając go na jeszcze wilgotną skórę, czyli kąpiel z dodatkiem kokosa będzie najlepszym rozwiązaniem.</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Glinka żółta</span> posiada właściwości kojące, rewitalizuje, oczyszcza skórę z toksyn. Ma dobry wpływ na kondycję skóry dzięki zawartości minerałów takich jak żelazo, krzem, fosfor, selen i wapń. Glinka żółta posiada właściwości regulujące, delikatnie oczyszczające i remineralizujące, a dodatkowo działa przeciwzapalnie.</p>
+         <!-- <a href="#" class="project__github-link">Github</a> -->
+        </div>
+    </div>
+
+
+    
+    <div id='product-2-details' class="products-details__container">
+            <div class="products-details__close-btn-container">
+                <button id="product-2__close-btn" class="products-details__close-btn"><img src="assets/x-icon.svg" alt="exit-icon"></button>
+            </div>
+            <div class="products-details__photo">
+                <img src="assets/soap2.jpg" alt="project-photo">
+            </div>
+            <div class="products-details__info">
+                <h4 class="products-details__title">Soczysta gruszka</h4>
+                <span class="products-details__tags">Nawilzająca bomba kąpielowa</span>
+                <h5 class="products-details__subtitle">Właściwości</h5>
+                <ul class="products-details__list">
+                    <li class="products-details__list-item">nawilży skórę</li>
+                    <li class="products-details__list-item">umili kąpiel efektem musowana</li>
+                    <li class="products-details__list-item">oczyści dzięki zastosowanej glince</li>
+                    <li class="products-details__list-item">zapach jest tylko delikatnym dodatkiem, głównym zadaniem kuli jest nawilżenie ciała</li>
+                    <li class="products-details__list-item">zmiękcza wode dzięki czemu kąpiel staje się przyjemniejsza</li>
+                </ul>
+                
+                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sposób użycia:</span> Bombę wrzucić do wanny z ciepła wodą, po kąpieli ciało osuszać delikatnie ręcznikiem oklepując, a nie pocierając. 
+                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> soda oczyszczona, kwas cytrynowy, skrobia kukurydziana, masło Shea, olej kokosowy, glinak żółta, kompozycja zapachowa</p>
+                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span> Sodium Bicarbonate, Citric Acid, Zea Mays Starch, Butyrospermum Parkii Butter, Cocos Nucifera Oil, Illite, Parfum, Hexyl Cinnama*l, Hydroxyisohexyl 3-Cyclohexene Carboxaldehyde*.
+                <p class="products-details__paragraph">Waga ok. 85g</p>
+                
+                <h5 class="products-details__subtitle">Więcej o składnikach</h5>
+                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Soda oczyszczona</span> to podstawowy składnik bomb kąpielowych, a dodatkowo soda ma właściwości oczyszczające i odkażające.</p>
+                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Kwas cytrynowy</span> to drugi podstawowy składnik bomb kąpielowych, w reakcji z soda i wodą daje efekt musowania.  Dodatkowo kwasek wykazuje właściwości odkażające i przeciwbakteryjne, a także zmiękcza wodę. 
+                </p>
+                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skrobia kukurydziana</span> powoduje, że bomby nie opadają na dno wanny a unoszą się na wodzie. Skrobia zmiękcza skórę, a także może delikatnie łagodzić podrażnienia. </p>
+                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Masło Shea</span> (nierafinowane) wykazuje ogromne działanie pielęgnacyjne, to panaceum na suchą skórę. Natłuszcza, regeneruje, łagodzi podrażnienia, wygładza i uelastycznia. Masło Shea zwiera naturalną allantoinę, nasycone i nienasycone kwasy tłuszczowe oraz prowitaminę A i witaminy F i E, co sprawia, że skóra jest dobrze nawilżona i pokryta lipidowym filmem zabezpieczającym. Substancje zawarte w maśle chronią i wzmacniają skórę poprawiając jej elastyczność. Shea chroni przed wysuszeniem oraz wspomaga utrzymanie wody w komórkach skóry. To jedno z lepszych maseł na świeci. </p>
+                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Olej kokosowy</span> posiada właściwości nawilżające i ochronne. Dobrze się wchłania, wygładza i poprawia elastyczność skóry. Sprzyja zdrowemu i promiennemu wyglądowi skóry, pozostawią ją miękką i przyjemną w dotyku. Polecany jest do skóry suchej, pękającej oraz uszkodzonej przez słoń lub różnego rodzaju zapalenia. Jest dobrą alternatywą dla chemicznych ”oliwek dla dzieci”. Ponadto może być samodzielnie stosowany, jako balsam wtedy najlepsze efekty można uzyskać używając go na jeszcze wilgotną skórę, czyli kąpiel z dodatkiem kokosa będzie najlepszym rozwiązaniem.</p>
+                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Glinka żółta</span> posiada właściwości kojące, rewitalizuje, oczyszcza skórę z toksyn. Ma dobry wpływ na kondycję skóry dzięki zawartości minerałów takich jak żelazo, krzem, fosfor, selen i wapń. Glinka żółta posiada właściwości regulujące, delikatnie oczyszczające i remineralizujące, a dodatkowo działa przeciwzapalnie.</p>
+             <!-- <a href="#" class="project__github-link">Github</a> -->
+            </div>
+        </div>
         <!-- <section class="section ">
             <h3 class="section__title">Sprawdź dostępność</h3>
         </section>
@@ -144,7 +219,7 @@
             <h3 class="section__title">Recenzje produktów</h3>
         </section> -->
 
-        <section class="section">
+        <section id="o-mnie" class="section">
             <h3 class="section__title">O mnie</h3>
             <div class="section__avatar">
                 <img src="" alt="photo" />
@@ -156,7 +231,7 @@
                 molestie. Pellentesque egestas urna ac convallis efficitur. Morbi a malesuada urna. </p>
         </section>
     </main>
-    <footer class="section footer">
+    <footer id="kontakt" class="section footer">
         <h3 class="section__title">Kontakt</h3>
         <div class="section__form-container">
             <div class="footer__data-container">
@@ -186,6 +261,7 @@
     <script src="js/Slider.js"></script>
     <script src="js/Filter.js"></script>
     <script src="js/ContactForm.js"></script>
+    <script src="js/Navigation.js"></script>
     <script src="js/index.js"></script>
 
     <!-- endbuild -->

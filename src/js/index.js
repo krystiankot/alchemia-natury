@@ -1,39 +1,7 @@
-const hamburger = document.querySelector('.nav__hamburger-btn');
-const lista = document.querySelector('.nav__items');
-var flag = true;
-hamburger.addEventListener('click', function () {
-    this.classList.toggle('nav__hamburger-btn--is-active');
-    if (flag) {
-        flag = false;
-        lista.classList.add('nav__items--is-opened');
-    } else {
-        lista.classList.remove('nav__items--is-opened');
-        flag = true;
-    }
-
-});
-
-window.addEventListener('scroll', function () {
-    let pageYOffset = this.pageYOffset;
-    let navHeight = document.querySelector('.nav__description-container').offsetHeight;
-    let nav = document.querySelector('.nav');
-    switch (true) {
-        case pageYOffset < navHeight: {
-            nav.classList.remove('nav--is-fixed');
-            break;
-        }
-        case pageYOffset > navHeight: {
-            nav.classList.add('nav--is-fixed');
-            break;
-        }
-        default: {};
-    }
-}, false);
+window.onload = function () {
 
 const slider = new Slider('.header__slider', {});
 const contactForm = new ContactForm('.section__form-container', {});
-
-
 
 const categories = [{
         id: 'wszystkie',
@@ -57,9 +25,30 @@ const categories = [{
     }
 ];
 const columns = 3;
+const columnsSettings = [{ 
+        containerMinWidth: 0,
+        containerMaxWidth: 500,
+        columns: 2
+    },
+    {
+        containerMinWidth: 500,
+        containerMaxWidth: 1000,
+        columns: 3
+    },
+    {
+        containerMinWidth: 1000,
+        containerMaxWidth: Infinity,
+        columns: 4
+    }
+];
+
 const filter = new Filter('.products__container', {
     categories,
-    columns
+    columns,
+    columnsSettings
 });
 
-filter.generateTags();
+const hamburgerBtn = document.querySelector('.nav__hamburger-btn');
+const list = document.querySelector('.nav__items');
+const navigation = new Navigation(hamburgerBtn, list);
+}
