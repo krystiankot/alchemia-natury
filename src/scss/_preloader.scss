@@ -1,0 +1,50 @@
+@include keyframes(bounce) {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+.preloader {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+
+  &--form {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    display: none;
+    left: 0;
+  }
+}
+
+.preloader__bounce-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+}
+
+.preloader__bounce-1,
+.preloader__bounce-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background: $mainColor;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.preloader__bounce-2 {
+  opacity: 0.5;
+  animation-delay: -1s;
+}

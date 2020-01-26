@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet" />
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
     <title>Alchemia Natury</title>
-    <meta name="description" content="Description" />
+    <meta name="description" content="Ręcznie robione kosmetyki naturalne" />
     <meta name="author" content="Krystian Kot" />
     <!-- build:css -->
     <link rel="stylesheet" href="css/style.css" />
@@ -16,6 +16,13 @@
 </head>
 
 <body>
+    <div class="preloader">
+        <div class="preloader__bounce-container">
+            <div class="preloader__bounce-1"></div>
+            <div class="preloader__bounce-2"></div>
+        </div>
+    </div>
+    <div class="container">
     <nav class="nav">
         <div class="nav__description-container">
             <div class="nav__logo-container"></div>
@@ -30,41 +37,58 @@
         <ul class="nav__items">
             <li class="nav__item"><a class="nav__link" href="#kim-jestesmy">Kim jesteśmy</a></li>
             <li class="nav__item"><a class="nav__link" href="#produkty">Produkty</a></li>
-            <!-- <li class="nav__item"><a class="nav__link" href="#">Gdzie kupić</a></li> -->
+            <li class="nav__item"><a class="nav__link" href="#gdzie-kupić">Gdzie kupić</a></li>
+            <li class="nav__item"><a class="nav__link" href="#współpraca">Współpraca</a></li>
             <li class="nav__item"><a class="nav__link" href="#o-mnie">O mnie</a></li>
-            <!-- <li class="nav__item"><a class="nav__link" href="#">Współpraca</a></li> -->
             <li class="nav__item"><a class="nav__link" href="#kontakt">Kontakt</a></li>
+            
         </ul>
     </nav>
     <header class="header">
         <div class="header__slider">
-            <div style='background-image: url("./assets/slide1.jpg");'>
+            <div style='background-image: url("./assets/slajdy - naturalna pielęgnacja.jpg"); background-size: cover;'>
                 <div class="slider__text-container">
                     <h3 class="slider__title">Naturalna Pielegnacja</h3>
-                    <p class="slider__paragraph">Skóre mamy tylko jedna i musi nam ona wystarczyć na całe zycie, dlatego
-                        dbajmy o nia</p>
+                    <p class="slider__paragraph">Skórę mamy tylko jedną i musi nam ona wystarczyć na całe życie, dlatego
+                        dbajmy o nią</p>
                 </div>
-
             </div>
-            <div style='background-image: url("./assets/slide2.jpg");'>Slide 1</div>
-            <div style='background-image: url("./assets/slide3.jpg");'>Slide 2</div>
+            <div style='background-image: url("./assets/slajd - mniej znaczy wiecej.jpg"); background-size: cover;'>
+                <div class="slider__text-container">
+                    <h3 class="slider__title">Mniej znaczy więcej</h3>
+                    <p class="slider__paragraph">Proste i krótkie składy, mniejsza ilość składników = większa zawartość każdego z nich, czyli silniejsze jego działanie </p>
+                </div>
+            </div>
+            <div style='background-image: url("./assets/slajdy - domowe spa.jpg"); background-size: cover;'>
+                <div class="slider__text-container">
+                    <div class="slider__text-container">
+                        <h3 class="slider__title">Domowe SPA</h3>
+                        <p class="slider__paragraph">Urządź sobie mini SPA w domu, czyli relaks w solankowej aromaterapeutycznej kąpieli lub bombowe nawilżenie dzięki kulom kąpielowym do tego maseczka enzymatyczna oraz pielęgnujące mydła</p>
+                    </div>
+                </div>
+            </div>
+            <div style='background-image: url("./assets/slajdy - siła w naturze.jpg"); background-size: cover;'>
+                <div class="slider__text-container">
+                    <div class="slider__text-container">
+                        <h3 class="slider__title">Siła w naturze</h3>
+                        <p class="slider__paragraph">Moc roślin i owoców, czyli dajmy sobie i swojej skórze to co dla niej najlepsze</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <div style='background-image: url("./assets/slajdy - siła w naturze.jpg"); background-size: cover;'>
+                <div class="slider__text-container">
+                    <h3 class="slider__title">??</h3>
+                    <p class="slider__paragraph">??</p>
+                </div>
+            </div> -->
         </div>
     </header>
     <main class="content-container">
         <section id="kim-jestesmy" class="section intro">
             <h3 class="section__title">Kim jesteśmy</h3>
-            <p class="section__paragraph">Alchemia natury to mała manufaktura, naturalne ręcznie robione kosmetyki
-                inspirowane
-                naturą i jej dobrodziejstwami. Receptury tworzone są z pasji, składniki dobierane tak, aby dać możliwie
-                jak
-                najlepszy efekt.</p>
-            <p class="section__paragraph">Każdy produkt od początku do końca wykonywany jest ręcznie, dzięki czemu
-                kosmetyki
-                te są wyjątkowe, oryginalne i niepowtarzalne, bo nie ma dwóch identycznych egzemplarzy. </p>
-            <p class="section__paragraph">Nie jest to produkcja masowa, lecz małe partie gdzie każda robiona jest z
-                największą
-                dokładnością.
-            </p>
+            <p class="section__paragraph">Alchemia natury to mała manufaktura, naturalne ręcznie robione kosmetyki inspirowane naturą i jej dobrodziejstwami. Receptury tworzone są z pasji, składniki dobierane tak, aby dać możliwie jak najlepszy efekt.</p>
+            <p class="section__paragraph">Każdy produkt od początku do końca wykonywany jest ręcznie, dzięki czemu kosmetyki te są wyjątkowe, oryginalne i niepowtarzalne, bo nie ma dwóch identycznych egzemplarzy</p>
+            <p class="section__paragraph">Nie jest to produkcja masowa, lecz małe partie gdzie każda robiona jest z największą dokładnością.</p>
         </section>
 
         <section id="produkty" class="section products">
@@ -72,68 +96,101 @@
             <div class="products__container">
                 <div id="product-1" data-category="Maseczki enzymatyczne" class="products__product">
                     <div class="products__img-container">
-                        <img class="products__img" src="./assets/soap.png" alt="soap image">
+                        <img class="products__img" src="./assets/maseczka zielona.jpg" alt="Zdjęcie maseczki">
                         <div class="products__img-background icon-search"></div>
                     </div>
-                    <h4 class="products__name">Produkt</h4>
-                    <span class="products__category">mydło1</span>
+                    <h4 class="products__name">Maseczka zielona</h4>
+                    <span class="products__category">maseczka</span>
                 </div>
-                <div id="product-2" data-category="Nawilżające bomby kąpielowe" class="products__product">
+                <div id="product-2" data-category="Maseczki enzymatyczne" class="products__product">
                     <div class="products__img-container">
-                        <img class="products__img" src="./assets/soap2.jpg" alt="soap image">
+                        <img class="products__img" src="./assets/maseczka żółta.jpg" alt="Zdjęcie maseczki">
                         <div class="products__img-background icon-search"></div>
                     </div>
-                    <h4 class="products__name">Produkt</h4>
-                    <span class="products__category">mydło2</span>
+                    <h4 class="products__name">Maseczka żółta</h4>
+                    <span class="products__category">maseczka</span>
                 </div>
-                <div id="product-3" data-category="Mydła" class="products__product">
+                <div id="product-3" data-category="Maseczki enzymatyczne" class="products__product">
                     <div class="products__img-container">
-                        <img class="products__img" src="./assets/soap4.png" alt="soap image">
+                        <img class="products__img" src="./assets/maseczka różowa.jpg" alt="Zdjęcie maseczki">
                         <div class="products__img-background icon-search"></div>
                     </div>
-                    <h4 class="products__name">Produkt</h4>
-                    <span class="products__category">mydło3</span>
+                    <h4 class="products__name">Maseczka różowa</h4>
+                    <span class="products__category">maseczka</span>
                 </div>
                 <div id="product-4" data-category="Aromapeutyczne sole do kąpieli" class="products__product">
                     <div class="products__img-container">
-                        <img class="products__img" src="./assets/soap3.png" alt="soap image">
+                        <img class="products__img" src="./assets/sól grejpfrut.jpg" alt="Zdjęcie soli">
                         <div class="products__img-background icon-search"></div>
                     </div>
-                    <h4 class="products__name">Produkt</h4>
-                    <span class="products__category">mydło4</span>
+                    <h4 class="products__name">Różowy grejpfrut</h4>
+                    <span class="products__category">Sól do kąpieli</span>
                 </div>
-                <div id="product-5" data-category="Nawilżające bomby kąpielowe" class="products__product">
+                <div id="product-5" data-category="Aromapeutyczne sole do kąpieli" class="products__product">
                     <div class="products__img-container">
-                        <img class="products__img" src="./assets/soap4.png" alt="soap image">
+                        <img class="products__img" src="./assets/sól eukaliptus.jpg" alt="Zdjęcie soli">
                         <div class="products__img-background icon-search"></div>
                     </div>
-                    <h4 class="products__name">Produkt</h4>
-                    <span class="products__category">mydło5</span>
+                    <h4 class="products__name">Cytrynowy eukaliptus</h4>
+                    <span class="products__category">Sól do kąpieli</span>
                 </div>
-                <div id="product-6" data-category="Mydła" class="products__product">
+                <div id="product-6" data-category="Peelingi do ciała" class="products__product">
                     <div class="products__img-container">
-                        <img class="products__img" src="./assets/soap3.png" alt="soap image">
+                        <img class="products__img" src="./assets/peeling.jpg" alt="Zdjęcie peelingu">
                         <div class="products__img-background icon-search"></div>
                     </div>
-                    <h4 class="products__name">Produkt</h4>
-                    <span class="products__category">mydło6</span>
+                    <h4 class="products__name">Czarna porzeczka</h4>
+                    <span class="products__category">Peeling do ciała</span>
                 </div>
-                <div id="product-7" data-category="Maseczki enzymatyczne" class="products__product">
+                <div id="product-7" data-category="Nawilżające bomby kąpielowe" class="products__product">
                     <div class="products__img-container">
-                        <img class="products__img" src="./assets/soap2.jpg" alt="soap image">
+                        <img class="products__img" src="./assets/Bomba azalia.jpg" alt="Zdjęcie bomby do kąpieli">
                         <div class="products__img-background icon-search"></div>
                     </div>
-                    <h4 class="products__name">Produkt</h4>
-                    <span class="products__category">mydło7</span>
+                    <h4 class="products__name">Azalia</h4>
+                    <span class="products__category">Bomba do kąpieli</span>
                 </div>
                 <div id="product-8" data-category="Nawilżające bomby kąpielowe" class="products__product">
                     <div class="products__img-container">
-                        <img class="products__img" src="./assets/soap.png" alt="soap image">
+                        <img class="products__img" src="./assets/bomba gruszka.jpg" alt="Zdjęcie bomby do kąpieli">
                         <div class="products__img-background icon-search"></div>
                     </div>
-                    <h4 class="products__name">Produkt</h4>
-                    <span class="products__category">mydło8</span>
+                    <h4 class="products__name">Soczysta gruszka</h4>
+                    <span class="products__category">Bomba do kąpieli</span>
                 </div>
+                <div id="product-9" data-category="Nawilżające bomby kąpielowe" class="products__product">
+                    <div class="products__img-container">
+                        <img class="products__img" src="./assets/Bomba niebieska malina.jpg" alt="Zdjęcie bomby do kąpieli">
+                        <div class="products__img-background icon-search"></div>
+                    </div>
+                    <h4 class="products__name">Niebieska malina</h4>
+                    <span class="products__category">Bomba do kąpieli</span>
+                </div>
+                <div id="product-10" data-category="Nawilżające bomby kąpielowe" class="products__product">
+                    <div class="products__img-container">
+                        <img class="products__img" src="./assets/bomba drzewo.jpg" alt="Zdjęcie bomby do kąpieli">
+                        <div class="products__img-background icon-search"></div>
+                    </div>
+                    <h4 class="products__name">Drzewo sandałowe</h4>
+                    <span class="products__category">Bomba do kąpieli</span>
+                </div>
+                <div id="product-11" data-category="Mydła" class="products__product">
+                    <div class="products__img-container">
+                        <img class="products__img" src="./assets/mydło mleczne.jpg" alt="Zdjęcie mydła">
+                        <div class="products__img-background icon-search"></div>
+                    </div>
+                    <h4 class="products__name">Mydło mleczne</h4>
+                    <span class="products__category">Mydło</span>
+                </div>
+                <div id="product-12" data-category="Mydła" class="products__product">
+                    <div class="products__img-container">
+                        <img class="products__img" src="./assets/mydło aloes.jpg" alt="Zdjęcie mydła">
+                        <div class="products__img-background icon-search"></div>
+                    </div>
+                    <h4 class="products__name">Mydło aloesowe</h4>
+                    <span class="products__category">Mydło</span>
+                </div>
+                
             </div>
         </section>
 
@@ -143,93 +200,490 @@
             <button id="product-1__close-btn" class="products-details__close-btn"><img src="assets/x-icon.svg" alt="exit-icon"></button>
         </div>
         <div class="products-details__photo">
-            <img src="assets/soap.jpg" alt="project-photo">
+            <img src="assets/maseczka zielona.jpg" alt="project-photo">
+        </div>
+        <div class="products-details__info">
+            <h4 class="products-details__title">Maseczka zielona</h4>
+            <span class="products-details__tags">Maseczka enzymatyczna</span>
+            <h5 class="products-details__subtitle">Właściwości</h5>
+            <ul class="products-details__list">
+                <li class="products-details__list-item">Wygładza</li>
+                <li class="products-details__list-item">Złuszcza martwy naskórek</li>
+                <li class="products-details__list-item">Oczyszcza</li>
+            </ul>
+            
+            <p class="products-details__paragraph">
+                Maseczka enzymatyczna na bazie mydła potasowego. Dlaczego na bazie mydła? Mydło potasowe posiada właściwości keratolityczne, czyli złuszcza martwy naskórek bez użycia środka ścierającego mechanicznie, dzięki czemu nie naruszamy ciągłości delikatnej skóry twarzy, składniki aktywne, czyli wyciągi z roślin i owoców wnikają w głąb skóry, a glinka lepiej oczyszcza. Dodatkowo zastosowany olej posiada właściwości pielęgnujące i nawilżające.  
+            </p>
+
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sposób użycia:</span> na oczyszczona skórę twarzy nanieść równomierną ilość maseczki, pozostawić na 3-8min (czas oraz częstość stosowania uzależniona jest od indywidualnych potrzeb skóry), zmyć obficie letnią wodą, następnie zastosować tonik w celu wyrównania pH skóry i krem nawilżający.
+                UWAGA! Podczas zmywania uważać na okolice oczu, ponieważ maseczka może się pienić i szczypać w oczy. </p>
+             
+            <p class="products-details__paragraph">
+                Po co używać takiej maseczki? Otóż maseczka enzymatyczna delikatnie ale i skutecznie złuszczy nam naskórek, a dzięki temu kosmetyki używane w kolejnych etapach naszej pielęgnacji tj. kremy, sera, esencje mają większą i lepszą możliwość działania na naszej skórze.  
+            </p>
+            
+            <p class="products-details__paragraph">
+                Maseczka enzymatyczna zielona jest dla osób z cerą tłustą, problematyczną, z przebarwieniami, potrzebująca oczyszczenia i pozbawioną blasku.
+            </p>
+                
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> zmydlony olej z pestek moreli, olej z czarnuszki siewnej nieraf., glinka zielona, woda, gliceryna, ekstrakt z lukrecji gładkiej, wyciąg z ananasa, wyciąg z malin </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span> Potassium Prunus Armeniaca Kernel, Nigella Sativa Seed Oil, Montmorillonite, Aqua, Glycerin, Glycyrrhiza Glabra Root Extract, Ananas Sativus Fruit Extract, Rubus idaeus fruit Extract, Sodium Benzoate, Potassium Sorbate 
+            
+            <h5 class="products-details__subtitle">Więcej o składnikach</h5>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Mydło potasowe morelowe,</span> czyli zmydlony olej z pestek moreli. Olej z moreli jest lekki, delikatny bogaty w nienasycone kwasy tłuszczowe oraz witaminę A i E, które są niezbędne w pielęgnacji każdego rodzaju skóry. Dzięki zawartości kwasów i witamin doskonale wpływa na kondycję skóry, pomaga w regeneracji i odbudowie naskórka, dzięki czemu skóra staje się jedwabiście gładka.</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Olej z czarnuszki </span> (nierafinowany) zwany jest Złotem Faraonów i nie bez przyczyny. To prawdziwe złoto dla naszej skóry. Jego kompozycja chemiczna jest bardzo złożona, zawiera sporą ilość olejków eterycznych skąd jego specyficzny zapach, nienasycone kwasy tłuszczowe linolowy, oleinowy a także bardzo rzadko występujący kwas eikozadienowy. Olej ten to bogactwo witamin, minerałów i aminokwasów. Najaktywniejszym składnikiem oleju jest tymochinon o właściwościach antyoksydacyjnych (wymiata wolne rodniki) i przeciwzapalnych.  Olej z czarnego kminu dobrze nawilża, wygładza i odżywia wnikając w głąb skóry oraz przyczynia się do wzmocnienia poprawy kolorytu. Ma działanie przeciwbakteryjne, przeciwpodrażniające oraz antyseptyczne. Olej z czarnuszki wspomaga eliminacje wszelakiego rodzaju zmian skórnych, hamuje nadmierną odpowiedź immunologiczną naszego organizmu na alergie a także bierze udział w prawidłowym tworzeniu nowych komórek. </p> 
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Glinka zielona</span> oczyszcza skórę z toksyn, wygładza, poprawia koloryt skóry a także działa ściągająco zwężając pory. Bogata jest w minerały, posiada ok 20 różnych soli mineralnych takich jak krzem, magnez, wapń, potas, fosfor i sód a także wiele mikroelementów i śladowych ilości pierwiastków np. selen, cynk, mangan czy molibden. Posiada silne właściwości matujące i odtłuszczające, działa przeciwzapalnie oraz przyśpiesza gojenie się skóry. Wykazuje zdolność do remineralizacji cery trwale poprawiając jej kondycje. Znana jest ze swoich właściwości zabliźniających i oczyszczających. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Ekstrakt z lukrecji gładkiej</span> działa przeciwzapalnie, przeciwbakteryjnie, antyalergicznie i antyoksydacyjnie. Wykazuje działanie hamujące aktywność tyrozynazy, czyli działa depigmentacyjnie na różnego rodzaju przebarwienia rozjaśniając cerę.  W korzeniu lukrecji, bo to właśnie z niego pozyskiwany jest ekstrakt znajdują się liczne triterpenowe saponiny m.in. glicyryzyna, która składa się z wapniowych i potasowych soli kwasu glicyryzynowego o silnym działaniu przeciwzapalnym i przeciwbakteryjnym, efekt ten dodatkowo wspomagają flawonoidy i izoflawony obecne w korzeniu. Kwas glicyryzynowy występujący w roślinie posiada właściwości przeciwutleniające i łagodzące. Lukrecja wykazuje właściwości regulujące wydzielanie sebum, odświeżające, oczyszczające oraz uspokajające i antyseptyczne. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Wyciąg z ananasa</span> wykazuje działanie przeciwzapalne, przyśpiesza gojenie zmian trądzikowych, pomaga przy redukcji przebarwień rozjaśniając skórę. Reguluje transepidermlaną utratę wody (TEWL) dzięki zawartości węglowodanów i kwasów AHA. Węglowodany to higroskopijne składniki aktywne, które wiążą wodę przyczyniając się do zachowania zdrowego poziomu nawilżenia, chronią przed nadmierną utratą wody i redukują odwonienie. Obecność kwasów AHA stymuluje regenerację komórkową, wykazuje delikatne działanie złuszczające, co przyczynia się do zmniejszenia warstwy rogowej naskórka oraz poprawy elastyczności skóry. Zawartości w ananasie witaminy C oprócz działania przeciwutleniającego i wymiatającego wolne rodniki pomaga także w stymulowaniu syntezy kolagenu, co powoduje, że ma ona większe zdolności do przyśpieszania gojenia się ran oraz korzystniej wpływa przy tworzeniu się nowych komórek. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Wyciąg z maliny</span> odświeża, łagodzi podrażnienia, poprawia ogólny wygląd skóry i wzmacnia ją. Owoce malin są bogatym źródłem cukrów (węglowodanów), kwasów owocowych (cytrynowy i jabłkowy), witamin A, C, E i z grupy B oraz wielu soli mineralnych. Ze względu na zawartość związków fenolowych i witaminy C maliny posiadają właściwości antyutleniające, wyłapują wolne rodniki powodujące starzenie oraz chronią organizm przed zniszczeniami komórek. Wyciąg z malin przyczynia się do regulowania transepidermalnej utraty wody (TEWL) oraz regeneracji komórkowej dzięki zawartości węglowodanów i kwasów AHA. Dodatkowo zawarte z malinach flawonoidy działając podobnie do witaminy P redukują wrażliwość kapilar zwiększają ich odporność wpływając tym samym korzystnie na system naczyniowo-żylny poprawiając mikrokrążenie oraz kruchość naczynek. Kwasy owocowe zawarte w malinach mają działanie przeciwłojotokowe, keratolityczne oraz depigmentacyjne. </p>
+        </div>
+    </div>
+
+    <div id='product-2-details' class="products-details__container">
+        <div class="products-details__close-btn-container">
+            <button id="product-2__close-btn" class="products-details__close-btn"><img src="assets/x-icon.svg" alt="exit-icon"></button>
+        </div>
+        <div class="products-details__photo">
+            <img src="assets/maseczka żółta.jpg" alt="project-photo">
+        </div>
+        <div class="products-details__info">
+            <h4 class="products-details__title">Maseczka żółta</h4>
+            <span class="products-details__tags">Maseczka enzymatyczna</span>
+            <h5 class="products-details__subtitle">Właściwości</h5>
+            <ul class="products-details__list">
+                <li class="products-details__list-item">Wygładza</li>
+                <li class="products-details__list-item">Złuszcza martwy naskórek</li>
+                <li class="products-details__list-item">Oczyszcza</li>
+            </ul>
+            
+            <p class="products-details__paragraph">
+                Maseczka enzymatyczna na bazie mydła potasowego. Dlaczego na bazie mydła? Mydło potasowe posiada właściwości keratolityczne, czyli złuszcza martwy naskórek bez użycia środka ścierającego mechanicznie, dzięki czemu nie naruszamy ciągłości delikatnej skóry twarzy, składniki aktywne, czyli wyciągi z roślin i owoców wnikają w głąb skóry, a glinka lepiej oczyszcza. Dodatkowo zastosowany olej posiada właściwości pielęgnujące i nawilżające.  
+            </p>
+
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sposób użycia:</span> na oczyszczona skórę twarzy nanieść równomierną ilość maseczki, pozostawić na 3-8min (czas oraz częstość stosowania uzależniona jest od indywidualnych potrzeb skóry), zmyć obficie letnią wodą, następnie zastosować tonik w celu wyrównania pH skóry i krem nawilżający.
+                UWAGA! Podczas zmywania uważać na okolice oczu, ponieważ maseczka może się pienić i szczypać w oczy. </p>
+             
+            <p class="products-details__paragraph">
+                Po co używać takiej maseczki? Otóż maseczka enzymatyczna delikatnie ale i skutecznie złuszczy nam naskórek, a dzięki temu kosmetyki używane w kolejnych etapach naszej pielęgnacji tj. kremy, sera, esencje mają większą i lepszą możliwość działania na naszej skórze.  
+            </p>
+            
+            <p class="products-details__paragraph">
+                Maseczka enzymatyczna żółta jest dla osób z cerą normalną, to maseczka dla każdego.
+            </p>
+                
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> Zmydlony olej z pestek moreli, olej z krokosza barwiarskiego, glinka żółta, woda, gliceryna, wyciąg z granatu, wyciąg z alg brunatnych, wyciąg z malin  </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span> Potassium Prunus Armeniaca Kernel, Carthamus Tinctorius Seed Oil, Illite, Aqua, Glycerin, Punica Granatum Fruit Extract, Laminaria Digitata Extract, Rubus idaeus fruit Extract, Sodium Benzoate, Potassium Sorbate, Citric Acid  
+            
+            <h5 class="products-details__subtitle">Więcej o składnikach</h5>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Mydło potasowe morelowe,</span> czyli zmydlony olej z pestek moreli. Olej z moreli jest lekki, delikatny bogaty w nienasycone kwasy tłuszczowe oraz witaminę A i E, które są niezbędne w pielęgnacji każdego rodzaju skóry. Dzięki zawartości kwasów i witamin doskonale wpływa na kondycję skóry, pomaga w regeneracji i odbudowie naskórka, dzięki czemu skóra staje się jedwabiście gładka.</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Olej z krokosza barwiarskiego </span> (nierafinowany) zwany również olejem szafranowym, otrzymywany jest z nasion rośliny przypominającej wyglądem oset. Jest źródłem nienasyconych kwasów tłuszczowych a w szczególności cennego kwasu linolowego, który pomaga regenerować cerę. Olej ten zawiera także dużą dawkę witaminy E. Olej krokoszowy jest jednym z lepszych wyborów, jeśli chcemy dużego nawilżenia przy jednocześnie lekkiej konsystencji, olej dobrze wchłania i nie zatyka porów. Odżywczo podobny jest do oliwy z oliwek. Sprawdza się w pielęgnacji cery mieszanej, normalnej, tłustej, dojrzałej a także z tendencją do niewielkich problemów. Sprawia, że skóra jest gładka, ma zdrowy młodzieńczy wygląd, a także pomaga przy zaczerwienieniach. Zawiera silne antyoksydanty jak witaminę E i A oraz fitoestrole, które wymiatają wolne rodniki przyczyniające się do starzenia się skóry. </p> 
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Glinka żółta</span> posiada właściwości kojące, rewitalizuje, oczyszcza skórę z toksyn. Ma dobry wpływ na kondycję skóry za sprawą dużej zawartości pierwiastków i mikroelementów takich jak żelazo, krzem, fosfor, selen i wapń. Glinka żółta posiada właściwości regulujące, delikatnie oczyszczające i remineralizujące, a dodatkowo działa przeciwzapalnie. Zwęża tzw. pory, odświeża i odżywia zmęczoną skórę.  </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Wyciąg z granatu</span> wykazuje działanie nawilżające, kojące, przeciwzapalne a także pomaga redukować przebarwienia. Zawartości witaminy C pomaga zachować integralną strukturę kolagenu w skórze właściwej, co zapobiega i redukuje oznaki starzenia. Witamina E obecna w granacie wspomaga właściwości przeciwutleniające, wychwytując wolne rodniki. Owoc ten zawiera m.in. taniny, czyli substancje o działaniu antybakteryjnym i ściągającym, kwas galusowy i elagowy posiadający działanie regulujące prace gruczołów wydzielających sebum.  </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Wyciąg z alg brunatnych</span> intensywnie nawilża i łagodzi zmęczoną skórę ze względu na obecność polisacharydów alginianów, które dodatkowo tworzą na skórze film nawilżający i wspomagają właściwości antyoksydacyjne. Algi brunatne to źródło jodu, który ma działanie przeciwobrzękowe oraz sodu, potasu, krzemu i wapnia, a także witaminy A, B, C, D i E o działaniu przeciwzapalnym i neutralizującym wolne rodniki. Algi odżywiają i ujędrniają skórę oraz poprawiają jej koloryt.</p> 
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Wyciąg z maliny</span> odświeża, łagodzi podrażnienia, poprawia ogólny wygląd skóry i wzmacnia ją. Owoce malin są bogatym źródłem cukrów(węglowodanów), kwasów owocowych (cytrynowy i jabłkowy), witamin A, C, E i z grupy B oraz wielu soli mineralnych. Ze względu na zawartość związków fenolowych i witaminy C maliny posiadają właściwości antyutleniające, wyłapują wolne rodniki powodujące starzenie oraz chronią organizm przed zniszczeniami komórek. Wyciąg z malin przyczynia się do regulowania transepidermalnej utraty wody (TEWL) oraz regeneracji komórkowej dzięki zawartości węglowodanów i kwasów AHA. Dodatkowo zawarte z malinach flawonoidy działając podobnie do witaminy P redukują wrażliwość kapilar zwiększają ich odporność wpływając tym samym korzystnie na system naczyniowo-żylny poprawiając mikrokrążenie oraz kruchość naczynek. Kwasy owocowe zawarte w malinach mają działanie przeciwłojotokowe, keratolityczne oraz depigmentacyjne. </p>
+        </div>
+    </div>
+
+    <div id='product-3-details' class="products-details__container">
+        <div class="products-details__close-btn-container">
+            <button id="product-3__close-btn" class="products-details__close-btn"><img src="assets/x-icon.svg" alt="exit-icon"></button>
+        </div>
+        <div class="products-details__photo">
+            <img src="assets/maseczka różowa.jpg" alt="project-photo">
+        </div>
+        <div class="products-details__info">
+            <h4 class="products-details__title">Maseczka różowa</h4>
+            <span class="products-details__tags">Maseczka enzymatyczna</span>
+            <h5 class="products-details__subtitle">Właściwości</h5>
+            <ul class="products-details__list">
+                <li class="products-details__list-item">Wygładza</li>
+                <li class="products-details__list-item">Złuszcza martwy naskórek</li>
+                <li class="products-details__list-item">Oczyszcza</li>
+            </ul>
+            
+            <p class="products-details__paragraph">
+                Maseczka enzymatyczna na bazie mydła potasowego. Dlaczego na bazie mydła? Mydło potasowe posiada właściwości keratolityczne, czyli złuszcza martwy naskórek bez użycia środka ścierającego mechanicznie, dzięki czemu nie naruszamy ciągłości delikatnej skóry twarzy, składniki aktywne, czyli wyciągi z roślin i owoców wnikają w głąb skóry, a glinka lepiej oczyszcza. Dodatkowo zastosowany olej posiada właściwości pielęgnujące i nawilżające.  
+            </p>
+
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sposób użycia:</span> na oczyszczona skórę twarzy nanieść równomierną ilość maseczki, pozostawić na 3-8min (czas oraz częstość stosowania uzależniona jest od indywidualnych potrzeb skóry), zmyć obficie letnią wodą, następnie zastosować tonik w celu wyrównania pH skóry i krem nawilżający.
+                UWAGA! Podczas zmywania uważać na okolice oczu, ponieważ maseczka może się pienić i szczypać w oczy. </p>
+             
+            <p class="products-details__paragraph">
+                Po co używać takiej maseczki? Otóż maseczka enzymatyczna delikatnie ale i skutecznie złuszczy nam naskórek, a dzięki temu kosmetyki używane w kolejnych etapach naszej pielęgnacji tj. kremy, sera, esencje mają większą i lepszą możliwość działania na naszej skórze.  
+            </p>
+            
+            <p class="products-details__paragraph">
+                Maseczka enzymatyczna różowa jest dla osób z cera dojrzałą, suchą, zmęczoną, naczyniową i wrażliwą. 
+            </p>
+                
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> zmydlony olej z pestek moreli, olej z pestek moreli nieraf., glinka różowa, woda, gliceryna, wyciąg z mandarynki, wyciąg z miłorzębu japońskiego, wyciąg z aceroli   </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span> Potassium Prunus Armeniaca Kernel, Prunus Armeniaca Kernel, Kaolin, Illite, Aqua, Glycerin, Citrus Reticulata Fruit Extract, Ginkgo Biloba Leaf Extract, Malpighia Glabra Fruit Extract, Sodium Benzoate, Potassium Sorbate, Citric Acid   
+            
+            <h5 class="products-details__subtitle">Więcej o składnikach</h5>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Mydło potasowe morelowe,</span> czyli zmydlony olej z pestek moreli. Olej z moreli jest lekki, delikatny bogaty w nienasycone kwasy tłuszczowe oraz witaminę A i E, które są niezbędne w pielęgnacji każdego rodzaju skóry. Dzięki zawartości kwasów i witamin doskonale wpływa na kondycję skóry, pomaga w regeneracji i odbudowie naskórka, dzięki czemu skóra staje się jedwabiście gładka.</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Olej z pestek moreli</span> (nierafinowany) jest lekki, łatwo się wchłania, nawilża i wygładza naskórek a stosowany na cerze dojrzałej ogranicza powstawanie zmarszczek. Olej ten to bomba witaminy A i E dla skóry wrażliwej i ze zmarszczkami. Witamina A jest niezbędna w procesie regeneracji naskórka, zapewnia skórze jędrność i odpowiednie nawodnienie, natomiast witamina E zwaną „witaminą młodości”, wspomaga walkę z wolnymi rodniki powodującymi starze się skóry. Olej ten charakteryzuje się delikatnym przyjemnym lekko orzechowo-migdałowo-marcepanowym zapachem. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Glinka różowa</span> oczyszcza skórę, pobudza limfę, wygładza, koi i odpręża. To mieszanka delikatnej glinki białej i czerwonej w odpowiednich proporcjach, dlatego jest najlepsza dla skóry wrażliwej, naczyniowej i skłonnej do podrażnień. Ma właściwości łagodzące, ściągające i zabliźniające dodatkowo dezynfekuje skórę, zmniejsza wydzielanie sebum, wzmacnia i obkurcza naczynka. Tak jak pozostałe glinki również glinka różowa jest skarbnicą minerałów takich jak krzem, żelazo i potas. Dodatkowo po zastosowaniu glinek skóra lepiej chłonie składniki zawarte w następnych krokach pielęgnacji takich jak sera czy kremy. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Wyciąg z mandarynki</span> tak jak inne cytrusy bogaty jest w kwasy owocowe AHA np. kwas cytrynowy, które delikatnie zmiękczają naskórek. To źródło witaminy C, P, B1 oraz prowitaminy A, które wyraźnie poprawiają ogólny wygląd naszej cery, wyrównując jej koloryt, rozjaśniając i ujędrniając. Wykazuje działanie antyseptyczne, odmładzające i przeciwzapalne. Zawartość witaminy C poprawia ukrwienie oraz stymuluje syntezę kolagenu, jest silnym przeciwutleniaczem hamującym wolne rodniki a tym samym jest bardzo ważna w zwalczaniu fotostarzenia. Dodatkowo mandarynki zawierają olejki eteryczne, które zapewniają relaks i ukojenie.</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Wyciąg z miłorzębu japońskiego (Ginkgo biloba)</span>  ma bardzo silne działanie przeciwutleniające, wyłapuje wolne rodniki, które są przyczyną starzenia naszej skóry a odpowiedzialnymi za takie działanie miłorzębu są flawonoidy, które chronią skórę przed uszkodzeniami oksydacyjnymi.  Wyciąg wzmacnia system naczyń krwionośnych oraz działała przeciwzapalnie i przeciwpodrażnieniowo, czego zasługą są właśnie biflawonoidy oraz terpeny zawarte w liściach ginkgo biloba. Ekstrakt z miłorzębu wzmacnia tkankę łączną skóry oraz przyczynia się do stymulowania regeneracji komórek, hamuje procesy starzenia, ujędrnia i rozjaśnia. Pielęgnuje skórę wrażliwą i z tendencją do tzw. pajączków. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Wyciąg z aceroli</span> dzięki dużej zawartości witaminy C jest silnym antyoksydantem, hamuje wolne rodniki oraz uszczelnia naczynia krwionośne. Stymuluj produkcje kolagenu i elastyny, co również wynika z zawartości wit. C w aceroli, bowiem kwas askorbinowy jest zasadniczym kofaktorem w syntezie kolagenu. Stymulacja kolagenu sprawia, że wit. C posiada właściwości regenerujące skórę a także wpływa korzystnie na formowanie nowych tkanek. Wyciąg z aceroli sprawdza się w pielęgnacji skóry z oznakami starzenia, zmęczenia, z utratą jędrności a także naczyniowej i z przebarwieniami. Acerola wykazuje także właściwości nawilżające wynikające z obecności węglowodanów, które wychwytują i zatrzymują w określonych warunkach wodę w celu zachowania prawidłowego nawilżenia. </p>
+        </div>
+    </div>
+
+    <div id='product-4-details' class="products-details__container">
+        <div class="products-details__close-btn-container">
+            <button id="product-4__close-btn" class="products-details__close-btn"><img src="assets/x-icon.svg" alt="exit-icon"></button>
+        </div>
+        <div class="products-details__photo">
+            <img src="assets/sól grejpfrut.jpg" alt="project-photo">
+        </div>
+        <div class="products-details__info">
+            <h4 class="products-details__title">Różowy Grejpfrut</h4>
+            <span class="products-details__tags">Aromapeutyczna sól do kąpieli</span>
+            <h5 class="products-details__subtitle">Właściwości</h5>
+            <ul class="products-details__list">
+                <li class="products-details__list-item">Działa aromaterapeutycznie </li>
+                <li class="products-details__list-item">Odżywia i regeneruje</li>
+                <li class="products-details__list-item">Oczyszcza z toksyn</li>
+                <li class="products-details__list-item">Relaksuje i rozluźnia</li>
+            </ul>
+            
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sposób użycia:</span> Do wanny z ciepła wodą wsypać ok.100g soli, rozmieszać do całkowitego rozpuszczenia, zanurzyć się w kąpieli. 
+                Kąpiel nie powinna trwać dłużej niż 15-20min. </p>
+            
+                
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> sól himalajska różowa, sól Epsom, olejek eteryczny grejpfrutowy 
+                *składnik olejku eterycznego </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span> Sodium Chloride, Magnesium Sulfate, Citrus Paradisi Peel Oil, Limonene*    
+            
+            <h5 class="products-details__subtitle">Więcej o składnikach</h5>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sól Epsom</span> zwana solą gorzką bądź angielska. Jest to czysta postać siarczanu magnezu, naturalnego środka od dawna używanego dla celów kosmetycznych i zdrowotnych. W przeciwieństwie do innych soli, sól Epsom posiada same korzystne właściwości pomagające ukoić ciało. Za właściwości soli odpowiedzialna jest specyficzna budowa cząsteczki siarczanu magnezu jak i jej dwóch wchodzących w skład pierwiastków. Magnez niezbędny jest w wielu procesach enzymatycznych, reguluje aktywność ponad 300 enzymów, podobnie siarka również niezbędna do prawidłowego funkcjonowania komórek. Wchłanianie siarczanów przez układ pokarmowy jest trudne, dlatego z rozwiązaniem przychodzą kąpiele solankowe, dzięki którym magnez i siarka lepiej wchłaniają się przez skórę.  Kąpiele w soli Epsom zalecane są w celu zwiększenia energii, gdyż to magnez stymuluje wytwarzanie energii w komórkach. Ponadto taka kąpiel relaksuje, zmniejsza napięcie mięśniowe oraz łagodzi ich bóle, wpływa uspokajająco na układ nerwowy łagodząc stres i eliminując uczucie zmęczenia, a także może pomóc w załagodzeniu stanów zapalnych skóry. Siarczan magnezu w trakcie kąpieli pomaga naszemu organizmowi w produkcji serotoniny, która poprawia nastrój, wprowadza w stan odprężenia oraz ogólnie dobrego samopoczucia. Sól ta działa regenerująco i rozluźniająco a także przywraca witalność organizmu.</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sól himalajska różowa (drobno i gruboziarnista)</span> zawiera aż 84 minerały i to właśnie one powodują, że kryształki soli mienią się licznymi odcieniami różu, czerwieni i bieli, wyglądając przy tym jak niewielkie drogocenne klejnoty. Prócz ładnego wygładu sól ta posiada ogromne właściwości detoksykujące skórę, wyrównuje jej koloryt i zmiękcza. Sól zawiera wapń, magnez, potas, miedź, żelazo i wiele innych pierwiastków ważnych dla naszego organizmu. Kąpiel z dodatkiem soli ujędrnia, wygładza, działa łagodząco, oczyszczająco i relaksująco. Biorąc kąpiele solne minerały przedostają się do naszej skóry w postaci jonów, co dla organizmu może być dobroczynna terapią. Różowa sól stosowana jest do stymulacji krążenia, zrelaksowania ciała, podczas osłabienia i brak energii a także przy napięciach i bólach mięśni i stawów. Dodatkowym atutem tej soli jest to, że to to doskonały surowiec do tworzenia fantazyjnych soli zdobiących łazienkę. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Olejek eteryczny grejpfrutowy</span> świeży, orzeźwiający, o przyjemnie delikatnie słodko-cytrusowym zapachu. Jest energetyzujący i sprawdza się, gdy potrzeba pobudzenia i sił witalnych. Stosuje się go, jako środek tonizujący, łagodzi on stres i napięcia nerwowe, wspomaga walkę z cellulitem. Ma działanie rozluźniające, łagodzi objawy zmęczenia a nawet może pomóc w załagodzeniu bólów głowy. Przez aromaterapeutów uważany jest za podnoszący na duchu, likwidujący sztywność mięśni i zmęczenie. Jest dobrym olejkiem odświeżającym o właściwościach antyseptycznych. </p>
+        </div>
+    </div>
+
+    <div id='product-5-details' class="products-details__container">
+        <div class="products-details__close-btn-container">
+            <button id="product-5__close-btn" class="products-details__close-btn"><img src="assets/x-icon.svg" alt="exit-icon"></button>
+        </div>
+        <div class="products-details__photo">
+            <img src="assets/sól eukaliptus.jpg" alt="project-photo">
+        </div>
+        <div class="products-details__info">
+            <h4 class="products-details__title">Cytrynowy Eukaliptus</h4>
+            <span class="products-details__tags">Aromapeutyczna sól do kąpieli</span>
+            <h5 class="products-details__subtitle">Właściwości</h5>
+            <ul class="products-details__list">
+                <li class="products-details__list-item">Działa aromaterapeutycznie </li>
+                <li class="products-details__list-item">Odżywia i regeneruje</li>
+                <li class="products-details__list-item">Oczyszcza z toksyn</li>
+                <li class="products-details__list-item">Relaksuje i rozluźnia</li>
+            </ul>
+            
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sposób użycia:</span> Do wanny z ciepła wodą wsypać ok.100g soli, rozmieszać do całkowitego rozpuszczenia, zanurzyć się w kąpieli. 
+                Kąpiel nie powinna trwać dłużej niż 15-20min. </p>
+            
+                
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> sól Epsom, sól z Morza Martwego, olejek eteryczny cytrynowy, olejek eteryczny eukaliptusowy 
+                *składniki olejków eterycznych </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span> Magnesium Sulfate, Maris Sal, Citrus Limon Peel Oil, Eucalyptus Globulus Leaf Oil, Limonene*, Citral*.     
+            
+            <h5 class="products-details__subtitle">Więcej o składnikach</h5>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sól Epsom</span> zwana solą gorzką bądź angielska. Jest to czysta postać siarczanu magnezu, naturalnego środka od dawna używanego dla celów kosmetycznych i zdrowotnych. W przeciwieństwie do innych soli, sól Epsom posiada same korzystne właściwości pomagające ukoić ciało. Za właściwości soli odpowiedzialna jest specyficzna budowa cząsteczki siarczanu magnezu jak i jej dwóch wchodzących w skład pierwiastków. Magnez niezbędny jest w wielu procesach enzymatycznych, reguluje aktywność ponad 300 enzymów, podobnie siarka również niezbędna do prawidłowego funkcjonowania komórek. Wchłanianie siarczanów przez układ pokarmowy jest trudne, dlatego z rozwiązaniem przychodzą kąpiele solankowe, dzięki którym magnez i siarka lepiej wchłaniają się przez skórę.  Kąpiele w soli Epsom zalecane są w celu zwiększenia energii, gdyż to magnez stymuluje wytwarzanie energii w komórkach. Ponadto taka kąpiel relaksuje, zmniejsza napięcie mięśniowe oraz łagodzi ich bóle, wpływa uspokajająco na układ nerwowy łagodząc stres i eliminując uczucie zmęczenia, a także może pomóc w załagodzeniu stanów zapalnych skóry. Siarczan magnezu w trakcie kąpieli pomaga naszemu organizmowi w produkcji serotoniny, która poprawia nastrój, wprowadza w stan odprężenia oraz ogólnie dobrego samopoczucia. Sól ta działa regenerująco i rozluźniająco a także przywraca witalność organizmu.</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sól z Morza Martwego</span> to jedna z najpopularniejszych i cenionych soli na świecie. Swoje zalety zawdzięcza bogactwu mikroelementów, jakie posiada w swoim składzie: magnezu, potasu, sodu, jodu wapnia, bromu, fosforu, manganu i żelaza.  Ta niezwykle cenna sól sprawi, że kąpiel będzie nie tylko chwilą pełnego relaksu, ale również regeneracyjnym zabiegiem dla skóry i mięśni całego ciała, bowiem sól ta działa nawilżająco na skórę, oczyszcza ją z toksyn oraz ujędrnia. Po kąpieli solankowej ciało zyskuje odmładzające uczucie rozluźnienia i relaksu. Sól z Morza Martwego nadaje się idealnie do skóry wrażliwej z tendencją do zapaleń, nie narusza naturalnego pH a może stanowić nawet barierę ochronną dla skóry. Produkty z Morza Martwego używane są nie tylko w trosce o zachowanie dobrej kondycji skóry, ale również w celach terapeutycznych. W czasie kąpieli w solance niektóre pierwiastki są wchłaniane przez pory naszej skóry, a nawet w tak naturalny sposób, jakim jest kąpiel można uzupełnić ewentualne braki np. magnezu. Ponadto różne badania naukowe mówią o dobroczynnym działaniu soli w różnych schorzeniach typu egzema, różnego rodzaju podrażnienia i stany zapalne skóry. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Olejek eteryczny eukaliptusowy</span> o świeżym, mentolowym, przenikliwym zapachu. Posiada działanie odkażające i odświeżające. Stosuje się go w terapii infekcji górnych dróg oddechowych, orzeźwia umysł w przypadku przeziębienia. W kąpieli działa pobudzająco i oczyszczająco, pobudza krążenie krwi, przez co poprawia natlenienie i odżywienie tkanek zmniejszając obrzęki. Jest środkiem silnie antyseptycznym, dezodorującym i oczyszczającym. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Olejek eteryczny cytrynowy</span> o świeżym, słodkich, orzeźwiającym cytrusowym zapachu. Ma działanie ogólnie pobudzające, tonizujące, wzmacniające odporność, antyseptyczne oraz przeciwbakteryjne. Według aromaterapeutów pomaga w osłabieniu, zmęczeniu oraz przy zaburzeniach koncentracji, a także hamuje elastazę, czyli enzym odpowiedzialny za rozkład włókien sprężystych skóry. Kąpiel z wykorzystaniem olejku cytrynowego odświeża, poprawia krążenia, dezynfekuje z bakterii oraz nadaje skórze piękny, świeży cytrynowy zapach. Wpływa orzeźwiająco i pobudzająco dodając energii. Pomaga również w pozbyciu się złego nastroju i chandry. </p>
+        </div>
+    </div>
+
+    <div id='product-6-details' class="products-details__container">
+        <div class="products-details__close-btn-container">
+            <button id="product-6__close-btn" class="products-details__close-btn"><img src="assets/x-icon.svg" alt="exit-icon"></button>
+        </div>
+        <div class="products-details__photo">
+            <img src="assets/peeling.jpg" alt="project-photo">
+        </div>
+        <div class="products-details__info">
+            <h4 class="products-details__title">Czarna porzeczka</h4>
+            <span class="products-details__tags">Peelingi do ciała</span>
+            <h5 class="products-details__subtitle">Właściwości</h5>
+            <ul class="products-details__list">
+                <li class="products-details__list-item">Złuszcza martwy naskórek</li>
+                <li class="products-details__list-item">Wygładza</li>
+                <li class="products-details__list-item">Poprawia mikrokrążenie skóry</li>
+            </ul>
+            
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sposób użycia:</span> Na oczyszczoną suchą skórę nałożyć nieduża ilość peelingu, rozprowadzić na skórze wykonując masaż ciała, następnie spłukiwać obficie ciepłą wodą wykonując okrężne ruchy, skórę osuszyć delikatnie ręcznikiem. Jeśli jest potrzeba zastosować balsam. 
+                <br> <br>
+                UWAGA! Unikać wprowadzania wody do produkty, gdyż może to spowodować zmianę jego konsystencji. Produkt najlepiej wydobywać sucha dłonią lub za pomocą szpatułki/łyżeczki. 
+                Przechowywać w temperaturze pokojowej 20-25°C</p>
+            
+                
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> sól himalajska różowa, olej z awokado, zmydlony olej rzepakowy, mielone pestki czarnej czarnej porzeczki, kompozycja zapachowa 
+                *składnik kompozycji zapachowej </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span>Sodium Chloride, Persea Gratissima Oil&Vegetable Oil, Potassium Canolate, Ribes Nigrum Seed (Powder), Parfum, Glycerin, Coumarin*     </p>
+         
+            
+            <h5 class="products-details__subtitle">Więcej o składnikach</h5>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sól himalajska różowa (drobnoziarnista)</span> zawiera aż 84 minerały i to właśnie one powodują, że kryształki soli mienią się licznymi odcieniami różu. Prócz ładnego wygładu sól ta posiada ogromne właściwości detoksykujące skórę, wyrównuje jej koloryt i zmiękcza. Sól zawiera wapń, magnez, potas, miedź, żelazo i wiele innych pierwiastków ważnych dla naszego organizmu. Sól w peelingu stanowi środek złuszczający, którego dodatkowym zadaniem jest ujędrnienie, wygładzenie i oczyszczenie. Masowanie ciała solą służy nie tylko złuszczeniu martwego naskórka, ale również ma na celu pobudzenie mikrokrążenia, likwidację zastojów limfy i poprawę usuwania toksyn. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Mydło potasowe rzepakowe</span>, czyli zmydlony olej rzepakowy. Olej Canola jest olejem tłustym i bogatym, zawiera witaminę E i K, karoten oraz fitoesterole, dzięki czemu ma działanie łagodzące.  Jest źródłem kwas GLA (gammalinolenowego), który odpowiada za elastyczność skóry oraz chroni przed działaniem czynników zewnętrznych. Olej rzepakowy powoduje silne odżywienie skóry, regeneruje naskórek sprawiając, że skóra odzyskuje gładkość. Tworzy na powierzchni skóry film, który zapobiega odparowywaniu wody z naskórka. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Olej z awokado</span> zwany olejem 7 witamin, jest prawdziwą bombą głównie wit. A, B, E, H, K, PP i F a także nienasyconych kwasów tłuszczowych i aminokwasów. Jest olejem gęstym, ale mimo to dobrze się wchłania wnikając w głębsze warstwy skóry pozostawiając ją odżywioną i nawilżoną. Wykazuje dużą zgodność z naturalnymi lipidami skóry oraz uzupełnia barierę lipidową.  Olej awokado sprawia, że skóra staje się jedwabiście gładka, podnosi jej wytrzymałość, regeneruje oraz ochroni przed czynnikami zewnętrznymi.  Olej ma działanie łagodzące podrażnienia i natłuszczające. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Mielone pestki czarnej porzeczki</span> złuszczają martwy naskórek, pobudzają mikrokrążenie, dzięki czemu skóra staje się bardziej dotleniona. Wyrównuje koloryt skóry, staje się ona bardziej elastyczna i gładsza. Peeling z dodatkiem nasion wspomaga walkę z cellulitem a nawet w pewny stopniu może odżywiać skórę, gdyż porzeczki są źródłem różnych substancji czynnych np. antocyjanów oraz kwasów owocowych i pektyn. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Glinka biała i różowa</span> w peelingu jej zdaniem jest oczyszczenie oraz bardzo delikatne złuszczenie. Glinka w tym produkcie podbija naturalny kolor pozostałych składników oraz nadaje gładką konsystencję. </p>
+        </div>
+    </div>
+
+    <div id='product-7-details' class="products-details__container">
+        <div class="products-details__close-btn-container">
+            <button id="product-7__close-btn" class="products-details__close-btn"><img src="assets/x-icon.svg" alt="exit-icon"></button>
+        </div>
+        <div class="products-details__photo">
+            <img src="assets/Bomba azalia.jpg" alt="project-photo">
+        </div>
+        <div class="products-details__info">
+            <h4 class="products-details__title">Azalia</h4>
+            <span class="products-details__tags">Nawilżająca bomba kąpielowa</span>
+            <h5 class="products-details__subtitle">Właściwości</h5>
+            <ul class="products-details__list">
+                <li class="products-details__list-item">nawilży skórę </li>
+                <li class="products-details__list-item">umili kąpiel efektem musowania </li>
+                <li class="products-details__list-item">oczyści dzięki zastosowanej glince</li>
+                <li class="products-details__list-item">zapach jest tylko delikatnym dodatkiem, głównym zadaniem kul jest nawilżenie ciała</li>
+                <li class="products-details__list-item">bomby zmiękczają wodę, dzięki czemu kąpieli staje się jeszcze bardziej przyjemna</li>
+            </ul>
+            
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sposób użycia:</span> Bombę wrzucić do wanny z ciepła wodą, po kąpieli ciało osuszać delikatnie ręcznikiem oklepując a nie pocierając. 
+                Bomby działają tylko w dobrze ciepłej wodzie.</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> soda oczyszczona, kwas cytrynowy, skrobia kukurydziana, masło Shea, olej kokosowy, glinka fioletowa, kompozycja zapachowa</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span>Sodium Bicarbonate, Citric Acid, Zea Mays Starch, Butyrospermum Parkii Butter, Cocos Nucifera Oil, Kaolin&CI 77742, Parfum. </p>
+            <h5 class="products-details__subtitle">Więcej o składnikach</h5>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Glina fioletowa</span> jest mieszaniną glinki z naturalnym pigmentem, dzięki czemu zawdzięcza swój niepowtarzalny kolor. Posiada właściwości oczyszczające i odświeżające. Dobrze kondycjonuje skórę wygładzając ją, sprawdza się przy skórze zmęczonej potrzebującej relaksu.</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Soda oczyszczona</span> to podstawowy składnik bomb kąpielowych, a dodatkowo soda ma właściwości oczyszczające i odkażające. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Kwas cytrynowy</span> to drugi podstawowy składnik bomb kąpielowych, w reakcji z soda i wodą daje efekt musowania.  Dodatkowo kwasek wykazuje właściwości odkażające i przeciwbakteryjne, a także zmiękcza wodę. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skrobia kukurydziana</span> powoduje, że bomby nie opadają na dno wanny a unoszą się na wodzie. Skrobia zmiękcza skórę, a także może delikatnie łagodzić podrażnienia. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Masło Shea</span> (nierafinowane) wykazuje ogromne działanie pielęgnacyjne, to panaceum na suchą skórę. Natłuszcza, regeneruje, łagodzi podrażnienia, wygładza i uelastycznia. Masło Shea zwiera naturalną allantoinę, nasycone i nienasycone kwasy tłuszczowe oraz prowitaminę A i witaminy F i E, co sprawia, że skóra jest dobrze nawilżona i pokryta lipidowym filmem zabezpieczającym. Substancje zawarte w maśle chronią i wzmacniają skórę poprawiając jej elastyczność. Shea chroni przed wysuszeniem oraz wspomaga utrzymanie wody w komórkach skóry. To jedno z lepszych maseł na świeci. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Olej kokosowy</span> posiada właściwości nawilżające i ochronne. Dobrze się wchłania, wygładza i poprawia elastyczność skóry. Sprzyja zdrowemu i promiennemu wyglądowi skóry, pozostawią ją miękką i przyjemną w dotyku. Polecany jest do skóry suchej, pękającej oraz uszkodzonej przez słoń lub różnego rodzaju zapalenia. Jest dobrą alternatywą dla chemicznych ”oliwek dla dzieci”. Ponadto może być samodzielnie stosowany, jako balsam wtedy najlepsze efekty można uzyskać używając go na jeszcze wilgotną skórę, czyli kąpiel z dodatkiem kokosa będzie najlepszym rozwiązaniem. </p>
+        </div>
+    </div>
+
+    <div id='product-9-details' class="products-details__container">
+        <div class="products-details__close-btn-container">
+            <button id="product-9__close-btn" class="products-details__close-btn"><img src="assets/x-icon.svg" alt="exit-icon"></button>
+        </div>
+        <div class="products-details__photo">
+            <img src="assets/Bomba niebieska malina.jpg" alt="project-photo">
+        </div>
+
+        <div class="products-details__info">
+            <h4 class="products-details__title">Niebieska malina</h4>
+            <span class="products-details__tags">Nawilżająca bomba kąpielowa</span>
+            <h5 class="products-details__subtitle">Właściwości</h5>
+            <ul class="products-details__list">
+                <li class="products-details__list-item">nawilży skórę </li>
+                <li class="products-details__list-item">umili kąpiel efektem musowania </li>
+                <li class="products-details__list-item">oczyści dzięki zastosowanej glince</li>
+                <li class="products-details__list-item">zapach jest tylko delikatnym dodatkiem, głównym zadaniem kul jest nawilżenie ciała</li>
+                <li class="products-details__list-item">bomby zmiękczają wodę, dzięki czemu kąpieli staje się jeszcze bardziej przyjemna</li>
+            </ul>
+            
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sposób użycia:</span> Bombę wrzucić do wanny z ciepła wodą, po kąpieli ciało osuszać delikatnie ręcznikiem oklepując a nie pocierając. 
+                Bomby działają tylko w dobrze ciepłej wodzie.</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> soda oczyszczona, kwas cytrynowy, skrobia kukurydziana, masło Shea, olej kokosowy, glinka fioletowa, kompozycja zapachowa</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span>Sodium Bicarbonate, Citric Acid, Zea Mays Starch, Butyrospermum Parkii Butter, Cocos Nucifera Oil, Kaolin&CI 77742, Parfum. </p>
+            <h5 class="products-details__subtitle">Więcej o składnikach</h5>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Glinka niebieska</span> oprócz swojego błękitnego kolory zwiera minerały takie jak krzem, glin, żelazo, fosfor, magnes, potas i sód. Oprócz właściwości oczyszczających posiada działanie nawilżające i łagodzące.</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Soda oczyszczona</span> to podstawowy składnik bomb kąpielowych, a dodatkowo soda ma właściwości oczyszczające i odkażające. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Kwas cytrynowy</span> to drugi podstawowy składnik bomb kąpielowych, w reakcji z soda i wodą daje efekt musowania.  Dodatkowo kwasek wykazuje właściwości odkażające i przeciwbakteryjne, a także zmiękcza wodę. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skrobia kukurydziana</span> powoduje, że bomby nie opadają na dno wanny a unoszą się na wodzie. Skrobia zmiękcza skórę, a także może delikatnie łagodzić podrażnienia. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Masło Shea</span> (nierafinowane) wykazuje ogromne działanie pielęgnacyjne, to panaceum na suchą skórę. Natłuszcza, regeneruje, łagodzi podrażnienia, wygładza i uelastycznia. Masło Shea zwiera naturalną allantoinę, nasycone i nienasycone kwasy tłuszczowe oraz prowitaminę A i witaminy F i E, co sprawia, że skóra jest dobrze nawilżona i pokryta lipidowym filmem zabezpieczającym. Substancje zawarte w maśle chronią i wzmacniają skórę poprawiając jej elastyczność. Shea chroni przed wysuszeniem oraz wspomaga utrzymanie wody w komórkach skóry. To jedno z lepszych maseł na świeci. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Olej kokosowy</span> posiada właściwości nawilżające i ochronne. Dobrze się wchłania, wygładza i poprawia elastyczność skóry. Sprzyja zdrowemu i promiennemu wyglądowi skóry, pozostawią ją miękką i przyjemną w dotyku. Polecany jest do skóry suchej, pękającej oraz uszkodzonej przez słoń lub różnego rodzaju zapalenia. Jest dobrą alternatywą dla chemicznych ”oliwek dla dzieci”. Ponadto może być samodzielnie stosowany, jako balsam wtedy najlepsze efekty można uzyskać używając go na jeszcze wilgotną skórę, czyli kąpiel z dodatkiem kokosa będzie najlepszym rozwiązaniem. </p>
+        </div>
+    </div>
+
+    <div id='product-8-details' class="products-details__container">
+        <div class="products-details__close-btn-container">
+            <button id="product-8__close-btn" class="products-details__close-btn"><img src="assets/x-icon.svg" alt="exit-icon"></button>
+        </div>
+        <div class="products-details__photo">
+            <img src="assets/bomba gruszka.jpg" alt="project-photo">
         </div>
         <div class="products-details__info">
             <h4 class="products-details__title">Soczysta gruszka</h4>
-            <span class="products-details__tags">Nawilzająca bomba kąpielowa</span>
+            <span class="products-details__tags">Nawilżająca bomba kąpielowa</span>
             <h5 class="products-details__subtitle">Właściwości</h5>
             <ul class="products-details__list">
-                <li class="products-details__list-item">nawilży skórę</li>
-                <li class="products-details__list-item">umili kąpiel efektem musowana</li>
+                <li class="products-details__list-item">nawilży skórę </li>
+                <li class="products-details__list-item">umili kąpiel efektem musowania </li>
                 <li class="products-details__list-item">oczyści dzięki zastosowanej glince</li>
-                <li class="products-details__list-item">zapach jest tylko delikatnym dodatkiem, głównym zadaniem kuli jest nawilżenie ciała</li>
-                <li class="products-details__list-item">zmiękcza wode dzięki czemu kąpiel staje się przyjemniejsza</li>
+                <li class="products-details__list-item">zapach jest tylko delikatnym dodatkiem, głównym zadaniem kul jest nawilżenie ciała</li>
+                <li class="products-details__list-item">bomby zmiękczają wodę, dzięki czemu kąpieli staje się jeszcze bardziej przyjemna</li>
             </ul>
             
-            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sposób użycia:</span> Bombę wrzucić do wanny z ciepła wodą, po kąpieli ciało osuszać delikatnie ręcznikiem oklepując, a nie pocierając. 
-            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> soda oczyszczona, kwas cytrynowy, skrobia kukurydziana, masło Shea, olej kokosowy, glinak żółta, kompozycja zapachowa</p>
-            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span> Sodium Bicarbonate, Citric Acid, Zea Mays Starch, Butyrospermum Parkii Butter, Cocos Nucifera Oil, Illite, Parfum, Hexyl Cinnama*l, Hydroxyisohexyl 3-Cyclohexene Carboxaldehyde*.
-            <p class="products-details__paragraph">Waga ok. 85g</p>
-            
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sposób użycia:</span> Bombę wrzucić do wanny z ciepła wodą, po kąpieli ciało osuszać delikatnie ręcznikiem oklepując a nie pocierając. 
+                Bomby działają tylko w dobrze ciepłej wodzie.</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> soda oczyszczona, kwas cytrynowy, skrobia kukurydziana, masło Shea, olej kokosowy, glinka fioletowa, kompozycja zapachowa</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span>Sodium Bicarbonate, Citric Acid, Zea Mays Starch, Butyrospermum Parkii Butter, Cocos Nucifera Oil, Kaolin&CI 77742, Parfum. </p>
             <h5 class="products-details__subtitle">Więcej o składnikach</h5>
-            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Soda oczyszczona</span> to podstawowy składnik bomb kąpielowych, a dodatkowo soda ma właściwości oczyszczające i odkażające.</p>
-            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Kwas cytrynowy</span> to drugi podstawowy składnik bomb kąpielowych, w reakcji z soda i wodą daje efekt musowania.  Dodatkowo kwasek wykazuje właściwości odkażające i przeciwbakteryjne, a także zmiękcza wodę. 
-            </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Glinka żółta</span> posiada właściwości kojące, rewitalizuje, oczyszcza skórę z toksyn. Ma dobry wpływ na kondycję skóry dzięki zawartości minerałów takich jak żelazo, krzem, fosfor, selen i wapń. Glinka żółta posiada właściwości regulujące, delikatnie oczyszczające i remineralizujące, a dodatkowo działa przeciwzapalnie. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Soda oczyszczona</span> to podstawowy składnik bomb kąpielowych, a dodatkowo soda ma właściwości oczyszczające i odkażające. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Kwas cytrynowy</span> to drugi podstawowy składnik bomb kąpielowych, w reakcji z soda i wodą daje efekt musowania.  Dodatkowo kwasek wykazuje właściwości odkażające i przeciwbakteryjne, a także zmiękcza wodę. </p>
             <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skrobia kukurydziana</span> powoduje, że bomby nie opadają na dno wanny a unoszą się na wodzie. Skrobia zmiękcza skórę, a także może delikatnie łagodzić podrażnienia. </p>
             <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Masło Shea</span> (nierafinowane) wykazuje ogromne działanie pielęgnacyjne, to panaceum na suchą skórę. Natłuszcza, regeneruje, łagodzi podrażnienia, wygładza i uelastycznia. Masło Shea zwiera naturalną allantoinę, nasycone i nienasycone kwasy tłuszczowe oraz prowitaminę A i witaminy F i E, co sprawia, że skóra jest dobrze nawilżona i pokryta lipidowym filmem zabezpieczającym. Substancje zawarte w maśle chronią i wzmacniają skórę poprawiając jej elastyczność. Shea chroni przed wysuszeniem oraz wspomaga utrzymanie wody w komórkach skóry. To jedno z lepszych maseł na świeci. </p>
-            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Olej kokosowy</span> posiada właściwości nawilżające i ochronne. Dobrze się wchłania, wygładza i poprawia elastyczność skóry. Sprzyja zdrowemu i promiennemu wyglądowi skóry, pozostawią ją miękką i przyjemną w dotyku. Polecany jest do skóry suchej, pękającej oraz uszkodzonej przez słoń lub różnego rodzaju zapalenia. Jest dobrą alternatywą dla chemicznych ”oliwek dla dzieci”. Ponadto może być samodzielnie stosowany, jako balsam wtedy najlepsze efekty można uzyskać używając go na jeszcze wilgotną skórę, czyli kąpiel z dodatkiem kokosa będzie najlepszym rozwiązaniem.</p>
-            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Glinka żółta</span> posiada właściwości kojące, rewitalizuje, oczyszcza skórę z toksyn. Ma dobry wpływ na kondycję skóry dzięki zawartości minerałów takich jak żelazo, krzem, fosfor, selen i wapń. Glinka żółta posiada właściwości regulujące, delikatnie oczyszczające i remineralizujące, a dodatkowo działa przeciwzapalnie.</p>
-         <!-- <a href="#" class="project__github-link">Github</a> -->
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Olej kokosowy</span> posiada właściwości nawilżające i ochronne. Dobrze się wchłania, wygładza i poprawia elastyczność skóry. Sprzyja zdrowemu i promiennemu wyglądowi skóry, pozostawią ją miękką i przyjemną w dotyku. Polecany jest do skóry suchej, pękającej oraz uszkodzonej przez słoń lub różnego rodzaju zapalenia. Jest dobrą alternatywą dla chemicznych ”oliwek dla dzieci”. Ponadto może być samodzielnie stosowany, jako balsam wtedy najlepsze efekty można uzyskać używając go na jeszcze wilgotną skórę, czyli kąpiel z dodatkiem kokosa będzie najlepszym rozwiązaniem. </p>
+        </div>
+    </div>
+
+    <div id='product-10-details' class="products-details__container">
+        <div class="products-details__close-btn-container">
+            <button id="product-10__close-btn" class="products-details__close-btn"><img src="assets/x-icon.svg" alt="exit-icon"></button>
+        </div>
+        <div class="products-details__photo">
+            <img src="assets/bomba drzewo.jpg" alt="project-photo">
+        </div>
+        <div class="products-details__info">
+            <h4 class="products-details__title">Drzewo sandałowe</h4>
+            <span class="products-details__tags">Nawilżająca bomba kąpielowa</span>
+            <h5 class="products-details__subtitle">Właściwości</h5>
+            <ul class="products-details__list">
+                <li class="products-details__list-item">nawilży skórę </li>
+                <li class="products-details__list-item">umili kąpiel efektem musowania </li>
+                <li class="products-details__list-item">oczyści dzięki zastosowanej glince</li>
+                <li class="products-details__list-item">zapach jest tylko delikatnym dodatkiem, głównym zadaniem kul jest nawilżenie ciała</li>
+                <li class="products-details__list-item">bomby zmiękczają wodę, dzięki czemu kąpieli staje się jeszcze bardziej przyjemna</li>
+            </ul>
+            
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sposób użycia:</span> Bombę wrzucić do wanny z ciepła wodą, po kąpieli ciało osuszać delikatnie ręcznikiem oklepując a nie pocierając. 
+                Bomby działają tylko w dobrze ciepłej wodzie.</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> soda oczyszczona, kwas cytrynowy, skrobia kukurydziana, masło Shea, olej kokosowy, glinka fioletowa, kompozycja zapachowa</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span>Sodium Bicarbonate, Citric Acid, Zea Mays Starch, Butyrospermum Parkii Butter, Cocos Nucifera Oil, Kaolin&CI 77742, Parfum. </p>
+            <h5 class="products-details__subtitle">Więcej o składnikach</h5>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Glinka biała</span> wana porcelanową, jedna z najdelikatniejszych glinek. Jest bogactwem minerałów, zawiera m.in. krzem, magnez, potas, żelazo, fosfor, selen, mangan i miedź Ma bardzo dobre właściwości antyseptyczne, pielęgnujące i przeciwzapalne. W naturalny sposób oczyszcza i stymuluje proces regeneracji skóry. Przywraca skórze zdrowy wygląd.</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Soda oczyszczona</span> to podstawowy składnik bomb kąpielowych, a dodatkowo soda ma właściwości oczyszczające i odkażające. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Kwas cytrynowy</span> to drugi podstawowy składnik bomb kąpielowych, w reakcji z soda i wodą daje efekt musowania.  Dodatkowo kwasek wykazuje właściwości odkażające i przeciwbakteryjne, a także zmiękcza wodę. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skrobia kukurydziana</span> powoduje, że bomby nie opadają na dno wanny a unoszą się na wodzie. Skrobia zmiękcza skórę, a także może delikatnie łagodzić podrażnienia. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Masło Shea</span> (nierafinowane) wykazuje ogromne działanie pielęgnacyjne, to panaceum na suchą skórę. Natłuszcza, regeneruje, łagodzi podrażnienia, wygładza i uelastycznia. Masło Shea zwiera naturalną allantoinę, nasycone i nienasycone kwasy tłuszczowe oraz prowitaminę A i witaminy F i E, co sprawia, że skóra jest dobrze nawilżona i pokryta lipidowym filmem zabezpieczającym. Substancje zawarte w maśle chronią i wzmacniają skórę poprawiając jej elastyczność. Shea chroni przed wysuszeniem oraz wspomaga utrzymanie wody w komórkach skóry. To jedno z lepszych maseł na świeci. </p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Olej kokosowy</span> posiada właściwości nawilżające i ochronne. Dobrze się wchłania, wygładza i poprawia elastyczność skóry. Sprzyja zdrowemu i promiennemu wyglądowi skóry, pozostawią ją miękką i przyjemną w dotyku. Polecany jest do skóry suchej, pękającej oraz uszkodzonej przez słoń lub różnego rodzaju zapalenia. Jest dobrą alternatywą dla chemicznych ”oliwek dla dzieci”. Ponadto może być samodzielnie stosowany, jako balsam wtedy najlepsze efekty można uzyskać używając go na jeszcze wilgotną skórę, czyli kąpiel z dodatkiem kokosa będzie najlepszym rozwiązaniem. </p>
+        </div>
+    </div>
+
+    <div id='product-11-details' class="products-details__container">
+        <div class="products-details__close-btn-container">
+            <button id="product-11__close-btn" class="products-details__close-btn"><img src="assets/x-icon.svg" alt="exit-icon"></button>
+        </div>
+        <div class="products-details__photo">
+            <img src="assets/mydło mleczne.jpg" alt="project-photo">
+        </div>
+        <div class="products-details__info">
+            <h4 class="products-details__title">Mydło mleczne</h4>
+            <span class="products-details__tags">Mydło</span>
+            <p class="products-details__paragraph">
+                Każde mydło myje i to jest jego główne zadanie, myć.
+            </p>
+            <p class="products-details__paragraph">
+                Mydła naturalne oprócz ich głównego zastosowanie także pielęgnują naszą skórę, ponieważ są to zmydlone tłuszcze roślinne. 
+            </p>
+            <p class="products-details__paragraph">
+                Mydła naturalne obalają mit, że mydło wysusza i przesusza skórę. Mydło zrobione tradycyjną metodą na zimno z naturalnych składników (olejów i maseł) nie wysuszy naszej skóry. 
+            </p>
+            <p class="products-details__paragraph">
+                Mydło to zmydlone oleje i masła które już same w sobie maja właściwości pielęgnujące, a dodatkowe tzw.  przetłuszczenie pochodzące od niezmydlonych części tłuszczy korzystnie wpływa na naszą skórę pielęgnując ją i tworząc na niej ochronny płaszcz lipidowy. 
+            </p>
+
+            <p class="products-details__paragraph">
+                Mydło Mleczne powstało na bazie tzw. mleka owsianego, jest mydłem pielęgnującym o właściwościach łagodzących wynikających z zastosowanego „mleka”.
+                Mydło to posiada również dodatkowe właściwości oczyszczające dzięki zastosowanym glinkom. 
+            </p>
+        
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> Zmydlony: olej ryżowy, olej kokosowy, masło Shea, mleko owsiane, zmydlony: olej ze słodkich migdałów, kwas stearynowy, olej rycynowy; glinka żółta, glinka różowa, cukier, kompozycja zapachowa.
+                *składnik kompozycji zapachowej, **substancja zmydlająca</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span>Oryza Sativa Bran Oil, Aqua, Cocos Nucifera Oil, Butyrospermum Parkii Butter, Avena Sativa Meal Extract&Helianthus Annuus Seed Oil&Sodium Chloride, Prunus Amygdalus Dulcis Oil, Sodium Hydroxide** Stearic Acid, Ricinus Communis Seed Oil, Sucrose, Illite, Kaolin, Parfum, Hexyl Cinnamal*</p>
+        </div>
+    </div>
+
+    <div id='product-12-details' class="products-details__container">
+        <div class="products-details__close-btn-container">
+            <button id="product-12__close-btn" class="products-details__close-btn"><img src="assets/x-icon.svg" alt="exit-icon"></button>
+        </div>
+        <div class="products-details__photo">
+            <img src="assets/mydło aloes.jpg" alt="project-photo">
+        </div>
+        <div class="products-details__info">
+            <h4 class="products-details__title">Mydło aloesowe</h4>
+            <span class="products-details__tags">Mydło</span>
+            <p class="products-details__paragraph">
+                Każde mydło myje i to jest jego główne zadanie, myć.
+            </p>
+            <p class="products-details__paragraph">
+                Mydła naturalne oprócz ich głównego zastosowanie także pielęgnują naszą skórę, ponieważ są to zmydlone tłuszcze roślinne. 
+            </p>
+            <p class="products-details__paragraph">
+                Mydła naturalne obalają mit, że mydło wysusza i przesusza skórę. Mydło zrobione tradycyjną metodą na zimno z naturalnych składników (olejów i maseł) nie wysuszy naszej skóry. 
+            </p>
+            <p class="products-details__paragraph">
+                Mydło to zmydlone oleje i masła które już same w sobie maja właściwości pielęgnujące, a dodatkowe tzw.  przetłuszczenie pochodzące od niezmydlonych części tłuszczy korzystnie wpływa na naszą skórę pielęgnując ją i tworząc na niej ochronny płaszcz lipidowy. 
+            </p>
+
+            <p class="products-details__paragraph">
+                Mydło Aloesowe powstało na bazie soku z liści aloesu, jest to mydło o dobrych właściwościach myjących, pielęgnujących i łagodzących ze względu na zastosowany aloes. W mydle wykorzystano również tlenek cynku i sproszkowany młody jęczmień, który pozytywnie wpływa na naszą skórę, a także odpowiada za kolor mydła.  
+            </p>
+        
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> Zmydlony: olej kokosowy, olej ryżowy, masło Shea, olej z pestek winogron, sok z liści aloesu, zmydlony olej rycynowy, zmydlony kwas stearynowy, kompozycja zapachowa, cukier, sproszkowany jęczmień, tlenek cynku.
+                *składniki kompozycji zapachowej, **substancja zmydlająca</p>
+            <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span>Cocos Nucifera Oil, Oryza Sativa Bran Oil, Butyrospermum Parkii Butter, Vitis Vinifera Seed Oil, Aloe Barbadensis Leaf Juice, Aqua, Sodium Hydroxide**, Ricinus Communis Seed Oil, Stearic Acid, Parfum, Sucrose, Hordeum Vulgare Powder, Zinc Oxide, Hexyl Cinnamal*, Citric Acid, Benzyl Salicylate*, Sodium Benzoate, Potassium Sorbate</p>
         </div>
     </div>
 
 
-    
-    <div id='product-2-details' class="products-details__container">
-            <div class="products-details__close-btn-container">
-                <button id="product-2__close-btn" class="products-details__close-btn"><img src="assets/x-icon.svg" alt="exit-icon"></button>
-            </div>
-            <div class="products-details__photo">
-                <img src="assets/soap2.jpg" alt="project-photo">
-            </div>
-            <div class="products-details__info">
-                <h4 class="products-details__title">Soczysta gruszka</h4>
-                <span class="products-details__tags">Nawilzająca bomba kąpielowa</span>
-                <h5 class="products-details__subtitle">Właściwości</h5>
-                <ul class="products-details__list">
-                    <li class="products-details__list-item">nawilży skórę</li>
-                    <li class="products-details__list-item">umili kąpiel efektem musowana</li>
-                    <li class="products-details__list-item">oczyści dzięki zastosowanej glince</li>
-                    <li class="products-details__list-item">zapach jest tylko delikatnym dodatkiem, głównym zadaniem kuli jest nawilżenie ciała</li>
-                    <li class="products-details__list-item">zmiękcza wode dzięki czemu kąpiel staje się przyjemniejsza</li>
-                </ul>
-                
-                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Sposób użycia:</span> Bombę wrzucić do wanny z ciepła wodą, po kąpieli ciało osuszać delikatnie ręcznikiem oklepując, a nie pocierając. 
-                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skład:</span> soda oczyszczona, kwas cytrynowy, skrobia kukurydziana, masło Shea, olej kokosowy, glinak żółta, kompozycja zapachowa</p>
-                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">INCI:</span> Sodium Bicarbonate, Citric Acid, Zea Mays Starch, Butyrospermum Parkii Butter, Cocos Nucifera Oil, Illite, Parfum, Hexyl Cinnama*l, Hydroxyisohexyl 3-Cyclohexene Carboxaldehyde*.
-                <p class="products-details__paragraph">Waga ok. 85g</p>
-                
-                <h5 class="products-details__subtitle">Więcej o składnikach</h5>
-                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Soda oczyszczona</span> to podstawowy składnik bomb kąpielowych, a dodatkowo soda ma właściwości oczyszczające i odkażające.</p>
-                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Kwas cytrynowy</span> to drugi podstawowy składnik bomb kąpielowych, w reakcji z soda i wodą daje efekt musowania.  Dodatkowo kwasek wykazuje właściwości odkażające i przeciwbakteryjne, a także zmiękcza wodę. 
-                </p>
-                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Skrobia kukurydziana</span> powoduje, że bomby nie opadają na dno wanny a unoszą się na wodzie. Skrobia zmiękcza skórę, a także może delikatnie łagodzić podrażnienia. </p>
-                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Masło Shea</span> (nierafinowane) wykazuje ogromne działanie pielęgnacyjne, to panaceum na suchą skórę. Natłuszcza, regeneruje, łagodzi podrażnienia, wygładza i uelastycznia. Masło Shea zwiera naturalną allantoinę, nasycone i nienasycone kwasy tłuszczowe oraz prowitaminę A i witaminy F i E, co sprawia, że skóra jest dobrze nawilżona i pokryta lipidowym filmem zabezpieczającym. Substancje zawarte w maśle chronią i wzmacniają skórę poprawiając jej elastyczność. Shea chroni przed wysuszeniem oraz wspomaga utrzymanie wody w komórkach skóry. To jedno z lepszych maseł na świeci. </p>
-                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Olej kokosowy</span> posiada właściwości nawilżające i ochronne. Dobrze się wchłania, wygładza i poprawia elastyczność skóry. Sprzyja zdrowemu i promiennemu wyglądowi skóry, pozostawią ją miękką i przyjemną w dotyku. Polecany jest do skóry suchej, pękającej oraz uszkodzonej przez słoń lub różnego rodzaju zapalenia. Jest dobrą alternatywą dla chemicznych ”oliwek dla dzieci”. Ponadto może być samodzielnie stosowany, jako balsam wtedy najlepsze efekty można uzyskać używając go na jeszcze wilgotną skórę, czyli kąpiel z dodatkiem kokosa będzie najlepszym rozwiązaniem.</p>
-                <p class="products-details__paragraph"><span class="products-details__paragraph--strong">Glinka żółta</span> posiada właściwości kojące, rewitalizuje, oczyszcza skórę z toksyn. Ma dobry wpływ na kondycję skóry dzięki zawartości minerałów takich jak żelazo, krzem, fosfor, selen i wapń. Glinka żółta posiada właściwości regulujące, delikatnie oczyszczające i remineralizujące, a dodatkowo działa przeciwzapalnie.</p>
-             <!-- <a href="#" class="project__github-link">Github</a> -->
-            </div>
-        </div>
-        <!-- <section class="section ">
-            <h3 class="section__title">Sprawdź dostępność</h3>
-        </section>
+    <section id="gdzie-kupić" class="section ">
+        <h3 class="section__title">Tu kupisz nasze kosmetyki</h3>
+        <p class="section__paragraph">
+            Grupa sprzedażowa <a target="_blank" href="https://www.facebook.com/groups/583374619118140/">HAND MADE Mydło i Pachnidło</a>
+        </p>
+        
+    </section>
 
-        <section class="section">
-            <h3 class="section__title">Recenzje produktów</h3>
-        </section> -->
+
+
+    <section id="współpraca" class="section ">
+        <h3 class="section__title">Współpraca</h3>
+        <p class="section__paragraph">
+            Prowadzisz sklep, zielarnię, mydlarnię lub drogerię internetową, a może jesteś właścicielem salonu
+kosmetycznego lub innego miejsca gdzie zdrowie i naturalne kosmetyki wbijają się w tematyką
+Twojej działalności.
+Chcesz aby kosmetyki marki Alchemia Natury znalazła się na Twojej półce i wzbogaciły Twój
+asortyment, skontaktuj się z nami, a nawiążemy współprace z korzyścią dla obu stron.
+        </p>
+        <p class="section__paragraph">
+            Brakuje Ci pomysłu na podarunek dla swoich partnerów biznesowych czy współpracowników?
+Chcesz obdarować ich czymś innym, wyjątkowym a jednocześnie praktycznym. Napisz lub zadzwoń
+do nas, a postaramy się przygotować jak najlepszą paczkę specjalnie dla Ciebie.
+        </p>
+    </section>
+
+
 
         <section id="o-mnie" class="section">
             <h3 class="section__title">O mnie</h3>
-            <div class="section__avatar">
+            <!-- <div class="section__avatar">
                 <img src="" alt="photo" />
-            </div>
-            <p class="section__paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae ante
-                in
-                dolor interdum rutrum. Morbi at scelerisque libero. Sed pharetra pretium nunc, iaculis viverra orci
-                tempor
-                molestie. Pellentesque egestas urna ac convallis efficitur. Morbi a malesuada urna. </p>
+            </div> -->
+            <p class="section__paragraph">Jestem Ewelina, a Alchemia Natury to ja. <br> <br>
+                Skończyłam technologie chemiczną ma Politechnice Rzeszowskiej, obroniłam tam dwa dyplomy.
+                Będąc w trakcie swojej edukacji zaczęłam interesować się kosmetykami naturalnym i świadomą
+                pielęgnacją skóry. Ze względu na problematyczną i alergiczna skórę, której jestem posiadaczką w
+                stosowanych kosmetykach zawsze coś było nie tak i wtedy pomyślałam, a może by tak zrobić coś
+                sama i tak powstał mój pierwszy kosmetyk. Następne słoiczki nie zawsze były idealne ale metoda
+                prób i błędów doprowadziła do tego co chciałam. Wtedy pomyślałam a może by tak podzielić się
+                moimi kosmetykami z innymi. Tak właśnie moje hobby stało się moją pracą, wymarzoną pracą, która
+                daję ogromną satysfakcję. <br> <br>
+                Prywatnie natomiast jestem starającą się spełniać swoje marzenia osobą. Jestem ogromną fanka
+                dużych psów oraz posiadaczką jednego z nich - owczarka podhalańskiego, to niezły charakterek, który
+                jak chce to potrafi być nawet słodkim kochanym niedźwiadkiem. </p>
         </section>
+
+        
+
     </main>
     <footer id="kontakt" class="section footer">
         <h3 class="section__title">Kontakt</h3>
@@ -239,7 +693,7 @@
                     <li class="footer__data-item icon-location">ul. Bernardyńska 4</li>
                     <li class="footer__data-item icon-phone">+48 693 599 966</li>
                     <li class="footer__data-item icon-nip">7941791925</li>
-                    <li class="footer__data-item icon-mail-alt">ewelina.kot93@gmail.com</li>
+                    <li class="footer__data-item icon-mail-alt">kontakt@alchemianatury.pl</li>
                 </ul>
 
                 <div class="footer__media-container">
@@ -254,6 +708,7 @@
             <span class="footer__copyright">&copy; 2019. Wszelkie prawa zastrzeżone.</span>
             <span class="footer__author">Projekt i wykonanie: <a href="https://krystiankot.pl">krystiankot</a> </span>
         </div>
+    </div>
     </footer>
 
 
